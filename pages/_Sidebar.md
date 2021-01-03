@@ -5,6 +5,8 @@
 * [Config Packs](./Config-Packs)
 * [Block Palettes](./Block-Palettes)
 * [Biome Selection](./Biome-Selection)
+* [Included Trees](./Terra-Tree-Types)
+* [Included Flora](./Included-Flora)
 ## Configuration
 * [World Configuration](./World-Configuration)
 * [Pack Configuration](./pack.yml-Options)
@@ -23,8 +25,5 @@
 * [Noise](./Noise) 
 * [List o' Noise Equations](./List-o'-Noise-Equations)
 * [Weighted Pools](./Weighted-Pools)
-## Information
-* [Included Trees](./Terra-Tree-Types)
-* [Included Flora](./Included-Flora)
 ## Functions & Variables list
 * [Functions & Variables](./Functions-and-Variables)
