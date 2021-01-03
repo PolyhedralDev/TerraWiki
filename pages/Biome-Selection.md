@@ -14,7 +14,7 @@ simple example of a Biome Grid you may use in your world:
 2 continuous noise functions determine the biome at a location. This means that biomes adjacent on the grid
 will generate next to each other in the world. For example, if, for a pair of coordinates in the world, noise function X
 has a value of 3, and noise function Z has a value of 2, the biome at that location would be SAVANNA. Then, if Z shifts
-to 1, the biome would change to BIRCH_FOREST.  
+to 1, the biome would change to BIRCH_FOREST.   
 
 Generally, the X and Z axis are "scales." For example, in the above example, the X axis may be the Vegetation
 scale, as biomes with higher X values have more vegetation, and Z may be the Temperature scale, as biomes with higher Z
