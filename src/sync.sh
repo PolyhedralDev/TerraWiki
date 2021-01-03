@@ -8,7 +8,7 @@ cd pages
 git init
 
 echo "Setting up Authentication..."
-git config user.name "PolyBot"
+git config user.name "Polyhedral-Bot"
 git config user.email ${LOGIN_EMAIL}
 
 echo "Committing changes..."
