@@ -11,7 +11,7 @@ jobs:
   sync:
     name: Synchronize Wiki
     runs-on: ubuntu-latest
-    if: github.repository == 'Slimefun/Wiki'
+    if: github.repository == 'PolyhedralDev/TerraWiki'
     steps:
       - name: Checking out Repository
         uses: actions/checkout@v2
