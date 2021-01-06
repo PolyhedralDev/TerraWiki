@@ -5,7 +5,7 @@ Tree configurations are in the `structures/trees/` directory within a config pac
 Tree structure files are in the `structures/data/` directory within a config pack (Same directory as standard structures).  
 
 # Object Options
-Trees support all Terra [Object Options](./Object).
+Trees support all Terra [Object Options](./Objects).
 
 # Options
 

@@ -6,7 +6,7 @@ Structure files are in the `structures/data/` directory within a config pack.
 Loot tables are in the `structures/loot` directory within a config pack.    
 
 # Object Options
-Structures support all Terra [Object Options](./Object).
+Structures support all Terra [Object Options](./Objects).
 
 # Options
 

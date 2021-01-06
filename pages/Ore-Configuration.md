@@ -5,7 +5,7 @@ visually, use the `/te geometry deformedsphere <radius> <deform> <frequency>` co
 in your world.
 
 # Object Options
-Ores support all Terra [Object Options](./Object).
+Ores support all Terra [Object Options](./Objects).
 
 # Options
 

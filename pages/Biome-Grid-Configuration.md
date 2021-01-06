@@ -2,7 +2,7 @@ This page discusses the configuration of Biome Grids. For information on Biome G
 [Biome Selection](./Biome-Selection#biome-grids) page.   
 
 # Object Options
-Biomes support all Terra [Object Options](./Object).
+Biomes support all Terra [Object Options](./Objects).
 
 # Options
 
@@ -12,7 +12,8 @@ For each location in the world, the two Grid noise functions defined in the [Pac
 choose an X and Z coordinate in the array, and pick the biome in the corresponding cell.
 
 ## frequency
-Frequencies for this BiomeGrid
+Frequencies for this BiomeGrid. These frequencies are auto-scaled for the size of the BiomeGrid along its X and Z axes.
+(This means that frequencies will always produce approximately the same size of biomes, no matter the size of the grid)
 * `x` - X frequency
 * `z` - Z frequency
 
@@ -31,6 +32,9 @@ grid:
   - ["DESERT", "DESERT", "SAVANNA", "SAVANNA"]
   - ["DESERT", "DESERT", "SAVANNA", "SAVANNA"]
 id: LAND
+frequency:
+  x: 2048
+  z: 2048
 ```
 
 </details>

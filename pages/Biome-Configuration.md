@@ -3,7 +3,7 @@ This page discusses the configuration of Biomes. For information on Biomes, see 
 Biome configurations are in the `biomes/` directory within a config pack.  
 
 # Object Options
-Biomes support all Terra [Object Options](./Object).
+Biomes support all Terra [Object Options](./Objects).
 
 # Main options
 

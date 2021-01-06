@@ -4,7 +4,7 @@ Palettes](./Block-Palettes) page.
 Palette configurations are in the `palettes/` directory within a config pack.  
 
 # Object Options
-Palettes support all Terra [Object Options](./Object).
+Palettes support all Terra [Object Options](./Objects).
 
 # Options
 

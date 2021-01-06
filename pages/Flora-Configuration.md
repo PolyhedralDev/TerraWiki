@@ -7,7 +7,7 @@ tall). For larger common custom structures (like trees/rocks), see [Trees](./Tre
 less common structures, like temples and monuments, see [Structures](./Structure-Configuration).
 
 # Object Options
-Flora supports all Terra [Object Options](./Object).
+Flora supports all Terra [Object Options](./Objects).
 
 
 # Options

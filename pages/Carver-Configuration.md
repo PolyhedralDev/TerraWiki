@@ -4,7 +4,7 @@ A carver is essentially an ellipse. This ellipse then moves around the world on 
 worm), carving out where it moves.
 
 # Object Options
-Carvers support all Terra [Object Options](./Object).
+Carvers support all Terra [Object Options](./Objects).
 
 # Options
 
