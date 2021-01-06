@@ -8,7 +8,6 @@
 * [Included Trees](./Terra-Tree-Types)
 * [Included Flora](./Included-Flora)
 ## Configuration
-* [World Configuration](./World-Configuration)
 * [Pack Configuration](./pack.yml-Options)
 * [Biome Configuration](./Biome-Configuration)
 * [Biome Grid Configuration](./Biome-Grid-Configuration)
