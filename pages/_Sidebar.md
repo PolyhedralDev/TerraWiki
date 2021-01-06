@@ -1,6 +1,6 @@
 ## [Home](./)
 ## About
-* [What is Terra?](./What-is-Terra%3F)
+* [What is Terra?](./What-is-Terra)
 * [Getting Started](./Getting-Started)
 * [Config Packs](./Config-Packs)
 * [Block Palettes](./Block-Palettes)
