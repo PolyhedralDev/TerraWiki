@@ -11,7 +11,7 @@ function(arg1, arg2);
 ```
 
 `function` is the function's *identifier* (the function name), `arg1` and `arg2` are *arguments* (data given to the
-function for it to operate on). See the [Functions](./Functions) page for information on TerraScript functions
+function for it to operate on). See the [Functions](./TerraScript-Functions) page for information on TerraScript functions
 implemented in Terra.
 
 ## Return Types

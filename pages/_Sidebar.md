@@ -17,6 +17,10 @@
 * [Flora Configuration](./Flora-Configuration)
 * [Tree Configuration](./Tree-Configuration)
 * [Structure Configuration](./Structure-Configuration)
+## TerraScript
+* [TerraScript Basics](./TerraScript)
+* [TerraScript Syntax](./TerraScript-Syntax)
+* [TerraScript Functions](./TerraScript-Functions)
 ## Tutorials
 * [Noise Equation](./My-First-Noise-Equation)
 * [Advanced Noise Equations](./Multi-layered-Noise-Equations)
