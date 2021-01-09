@@ -115,6 +115,33 @@ str example = "hello, world"; // Declare a str variable called example with a va
 bool condition = false; // Declare a boolean variable called condition with a value of false.
 ```
 
+## References
+Variables can be used in expressions with *references*. To reference a variable, simply include it's identifier in an
+expression. The identifier evaluates to the value the variable contains. Example:
+```js
+num number = 3;
+print("Number: " + number); // Prints Number: 3
+```
+
+## Assignments
+The value of a variable can be updated with *assignments*. A declaration includes an assingment. To re-assign a variable
+after declaration, use the syntax `identifier = value;`. You cannot re-*declare* variables, you must re-*assign* them.
+Example:
+```js
+num aNumber = 0;
+print("Number: " + number); // Prints Number: 0
+aNumber = 3;
+print("Number: " + number); // Prints Number: 3
+```
+The value is declared and initialized to `0`. Then, after the first print statement, the variable is re-assigned to have
+a value of 3. You can even reference a variable in its own re-assignment:
+```js
+num aNumber = 4;
+print("Number: " + number); // Prints Number: 4
+aNumber = aNumber - 1; // Set aNumber to itself, minus one.
+print("Number: " + number); // Prints Number: 3
+```
+
 # Conditional Statements
 A key part of any programming language are conditional statements. TerraScript has a very standard `if`, `else if`
 `else` syntax.
