@@ -79,7 +79,7 @@ Operators are constructs which perform an *operation* on one or more piece of da
 
 #### Unary Operators
 Unary operators are operators which operate on only one piece of data.
-* `!` - Binary NOT operator. `!true` = false, `!false` = true.
+* `!` - Boolean NOT operator. `!true` = false, `!false` = true.
 * `-` - Negation operator. `-(1)` = -1, `-(-1)` = 1.
 
 ## Functions
