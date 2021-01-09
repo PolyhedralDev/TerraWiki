@@ -1,5 +1,5 @@
 TerraScript syntax is very similar to JavaScript and other C-like syntax languages. If you have worked with such
-languages, TerraScript will feel very familiar. If not, TerraScrips is still very simple to learn!
+languages, TerraScript will feel very familiar. If not, TerraScript is still very simple to learn!
 
 # Functions
 A function is an *expression* that performs an action using *arguments*, and (optionally) *returns* a value.
