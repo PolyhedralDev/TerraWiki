@@ -25,6 +25,96 @@ This value can be used in any expression requiring something matching its data t
 * A return type of `void` means that the function does not return a value. `void` functions cannot be assigned to
 variables or used in expressions.
 
+# Expressions
+An expression is a series of tokens that may be evaluated to produce a value. An example is `5 + 3 * 2`, which evaluates
+to `11`.
+
+## Types
+Before we get into expressions, we must first discuss types. A type is the "type" of data required/provided by
+something in TerraScript. Every expression in TerraScript has a type. TerraScript is a statically-typed language,
+meaning that type checking is done at the time of parsing, rather than execution. This means that you don't need to
+worry about checking the type of your variables at runtime.
+
+Terra has 3 types, which have been introduced above:
+* `num` - A numeric value. Num may hold decimal or integer values. It may be compared to other `num`s via comparison
+    operators.
+* `bool` - A boolean value. Booleans can either be true or false. It may be compared to other `bool`s via boolean
+    operators.
+* `str` - A string value. Strings hold sequences of characters, i.e. `"Hello, World!"` It may be compared to other `str`s
+    via the equals and not equals operators.
+    
+(`void` is not technically a type, it simply marks that a function does not return a value.)
+
+## Constant Expressions
+Constant expressions are expressions that hold a constant value of a certain type.
+* `str` constant expressions are surrounded by double quotes: `"This is a constant string"`
+* `num` constant expressions are raw numeric values: `0`, `1`, `20.3`, `42.0`
+* `bool` constant expressions are simply the keyword `true` or `false`
+
+## Compound Expressions
+Compound Expressions are multiple expressions combined using *operators*. TerraScript contains many operators to perform
+operations on different data types.
+
+### Operators
+Operators are constructs which perform an *operation* on one or more piece of data.
+
+#### Number Operators
+* `+` - Adds two numbers.
+* `-` - Subtracts the right number from the left number.
+* `*` - Multiplies two numbers.
+* `/` - Divides the left number by the right number.
+* `%` - Computes the nth modulus of the left number, where n is the right number.
+
+#### Boolean Operators
+* `&&` - Boolean AND (if left AND right are true, evaluates true)
+* `||` - Boolean OR (if left OR right are true, evaluates true)
+
+#### Comparison operators
+* `>` - Less than - Compares 2 numbers.
+* `<` - Greater than - Compares 2 numbers.
+* `>=` - Less than or equal to - Compares 2 numbers.
+* `<=` - Greater than or equal to = Compares 2 numbers.
+* `==` - Equal to - Compares any data types.
+* `!=` - Not equal to - Compares any data types.
+
+#### Unary Operators
+Unary operators are operators which operate on only one piece of data.
+* `!` - Binary NOT operator. `!true` = false, `!false` = true.
+* `-` - Negation operator. `-(1)` = -1, `-(-1)` = 1.
+
+## Functions
+Functions that return values are expressions! The return value of a function may be used in a compound expression by
+simply placing the function within the expression, like so:
+
+```js
+randomInt(5) * 2 > 3; // Evaluates to true if a random integer between 0 and 5 multiplied by 2 is greater than 3.
+```
+
+
+# Variables
+Variables are used to hold data. They are *declared* with a name called an *identifier*, which can be used in *assignments* and
+*references*.
+
+## Declaration
+To create a variable it must be *declared*. Declaration of variables in Terra follows a very standard syntax:
+```
+type identifier = value;
+```
+
+* `type` is the type of the variable, either `str`, `bool`, or `num`.
+* `identifier` is the identifier (name) to give the variable.
+* `value` is the value to assign to the variable. A variable's value may be any expression that matches its declared
+    type.
+
+Example:
+```js
+num aNumber = 0; // Declare a num variable called aNumber with value 0.
+
+str example = "hello, world"; // Declare a str variable called example with a value of "hello, world".
+
+bool condition = false; // Declare a boolean variable called condition with a value of false.
+```
+
 # Conditional Statements
 A key part of any programming language are conditional statements. TerraScript has a very standard `if`, `else if`
 `else` syntax.
@@ -41,13 +131,9 @@ In the above example, the `print` function would only be run if `condition` is e
 a `bool`. Any other data type would not be allowed by the parser.
 
 ### Comparisons
-Making comparisons with data allows if statements to become very powerful. TerraScript supports six comparison operators:
-* `>` - Less than
-* `<` - Greater than
-* `>=` - Less than or equal to
-* `<=` - Greater than or equal to
-* `==` - Equal to
-* `!=` - Not equal to
+Making comparisons with data allows if statements to become very powerful. TerraScript supports six comparison
+operators, listed above.
+
 
 These operators are all *binary operators*, meaning they operate between 2 expressions. E.G. `5 > 1` returns `true`.
 
@@ -112,3 +198,7 @@ if(randomNumber == 0) print("This message prints one-third the time!");
 else if(randomNumber == 1) print("This message prints another third the time!");
 else print("This message prints *another* third of the time!");
 ```
+
+# Loops
+
+TODO
