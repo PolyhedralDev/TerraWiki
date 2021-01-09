@@ -186,19 +186,133 @@ Well, what if we want more conditions? We can use `else if` statements to add mo
 sequentially, and evaluation will stop after one is true.
 ```js
 num randomNumber = randomInt(3);
-if(randomNumber == 0) print("This message prints one-third the time!");
-else if(randomNumber == 1) print("This message prints another third the time!");
+if(randomNumber == 0) print("This message prints one-third of the time!");
+else if(randomNumber == 1) print("This message prints another third of the time!");
 else if(randomNumber == 2) print("This message prints *another* third of the time!");
 ```
 Using `else if` statements, we can make our scripts more readable and concise. `else if` can also be paired with `else`,
 like so:
 ```js
 num randomNumber = randomInt(3);
-if(randomNumber == 0) print("This message prints one-third the time!");
-else if(randomNumber == 1) print("This message prints another third the time!");
+if(randomNumber == 0) print("This message prints one-third of the time!");
+else if(randomNumber == 1) print("This message prints another third of the time!");
 else print("This message prints *another* third of the time!");
 ```
 
 # Loops
 
-TODO
+Loops allow you to run a block of code repeatedly, based on a condition.
+
+## While Loop
+The simplest loop is the While Loop. A while loop takes a single boolean expression, called a conditional expression,
+in its declaration. The block declared with the while loop will be run if the condition is true, then will continue to
+run until the condition is false. Examples:
+```js
+while(true) { // Since the condition is always true, the block will run infinitely. You generally want to avoid situations like this.
+    print("this runs forever!");
+}
+```
+The loop in this example runs forever, which is generally undesirable.
+
+```js
+num aNumber = 0;
+while(number < 5) { // This will run the block until aNumber is NOT less than 5 (until A is greater than or equal to 5).
+    print("Number: " + aNumber);
+    aNumber = aNumber + 1; // Add one to aNumber each time the loop runs.
+}
+```
+This loop will run 5 times. The console output would be:
+```
+Number: 0
+Number: 1
+Number: 2
+Number: 3
+Number: 4
+```
+
+## For Loop
+The For Loop is similar to a while loop, but with 3 expressions in its declaration.
+Example:
+```js
+for(num x = 0; x < 5; x = x + 1) {
+    print("Number: " + aNumber);
+}
+```
+This loop does the same thing as the while loop above; it prints numbers from 0-4.
+It can be read as "declare a variable called X, loop as long as x is less than 5, add 1 to x evey time."
+
+### For Loop Expressions:
+
+#### Initializer
+The first expression in the for loop is called the initializer. Usually this is a variable declaration.
+In the case of a variable declaration initializer, that variable is available only within the scope of the loop.
+An example is `num x = 0` in the above example, which declares a number variable with identifier `x` that may be
+referenced in the loop's scope.
+
+#### Conditional
+The second expression in the for loop is called the conditional. It is identical to the conditional in the while loop;
+the loop will run so long as it is true, once it is false the loop will stop. Usually, if a variable was declared in
+the initializer, the conditional checks a comparison of the variable. In the example above, the conditional checks that
+`x` is less than 5.
+
+#### Incrementer
+The third statement in the loop is called the incrementer. The incrementer is run at the *end* of every loop iteration,
+after the entire block is executed, before the next conditional check is made. Usually the incrementer is used to
+increment a variable. In the example above, the incrementer adds 1 to `x` every iteration.
+
+### Flow Control
+TerraScript includes 4 Flow Control keywords:
+
+#### return
+The `return` keyword immediately halts execution of the script with "passing" exit status. It may be used in the base
+block, or in loops. Example:
+```js
+print("This will be printed!");
+return; // Halt execution here.
+print("This will never be printed!");
+```
+The above example exits with passing status after printing the first message. The second message will never be printed.
+
+#### fail
+The `fail` keyword immediately halts execution of the script with a "failure" exit status. It may be used in the base
+block, or in loops. Example:
+```js
+print("This will be printed!");
+fail; // Halt execution here.
+print("This will never be printed!");
+```
+The above example exits with *failing* status after printing the first message. The second message will never be printed.
+
+It is important to remember that both `return` and `fail` cascade, meaning that if they are used in loops they will
+immediately exit *all* parent loops and halt the script.
+
+#### break
+The `break` keyword immediately halts the execution of a loop. It will immediately exit the loop, resuming execution
+after the loop. Since it is a loop control keyword, it may *only* be used in loops. Example:
+
+```js
+num aNumber = 0;
+while(true) { // This loop would normally be infinite.
+    if(aNumber > 5) break; // Halt the loop if aNumber is greater than 5
+    print("Number:" + aNumber);
+    aNumber = aNumber + 1;
+}
+```
+The following loop would execute until `aNumber` is greater than 5, then it would halt and resume execution of the rest
+of the script.
+
+#### continue
+The `continue` keyword immediately halts the *current iteration* of a loop. It will stop the current exexution, and go
+to the head of the loop, then continue the loop (if the conditional is met). Example:
+
+```js
+num aNumber = 0;
+while(aNumber <= 5) { // This loop would normally be infinite.
+    aNumber = aNumber + 1;
+    print("Number:" + aNumber);
+    if(aNumber > 2) continue; // Go back to top if number is greater than 2
+    print("Less than 2");
+}
+```
+The following loop would execute until `aNumber` is greater than 5, and prints "Less than 2" every time it is less
+than 2.
