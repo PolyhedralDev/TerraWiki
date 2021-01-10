@@ -10,7 +10,7 @@ unfamiliar with Markdown, GitHub has a [Markdown Guide](https://guides.github.co
 * Keep line length under 120 characters. Most IDEs and text editors support showing a column at a certain line length,
 to make sure you don't go over 120 characters, we recommend you use this feature.
 * Use proper grammar. This is an obvious one, but check your pages! Some IDEs have spelling and grammar checking
-build-in for Markdown, if yours doesn't, be sure to check it manually before submitting a PR!
+built-in for Markdown, if yours doesn't, be sure to check it manually before submitting a PR!
 
 To contribute to this wiki, simply create a fork of this repository, add your page(s) to the `/pages/` folder, and
 submit a Pull Request.
