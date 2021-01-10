@@ -1,6 +1,6 @@
 # Terra Wiki
 This is the Terra Wiki repository. It is automatically synchronized with the main repository wiki. If you are looking
-for Terra documentation, head there instead.
+for Terra documentation, the main wiki can be found [here](https://github.com/PolyhedralDev/Terra/wiki).
 
 # Contributing
 Looking to contribute to the wiki? Awesome! If contributing, we ask that you keep a few things in mind:
