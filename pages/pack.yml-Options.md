@@ -6,7 +6,13 @@ blending, biome selection, and erosion.
 ### id
 The ID of the config pack. This should be unique (not something generic like "overworld,"
 since users may wish to install multiple config packs).  
-World configs use this ID to identify which config pack is to be used in the world.
+
+### author
+Put your name here! The author option allows you to take credit for the cool things you make with Terra. It is displayed
+on config load.
+
+### version
+The version of your config pack.
 
 ### grids
 A list of BiomeGrid IDs, which makes up the third dimension "zone" axis of biome selection. Generally, this section is
@@ -29,6 +35,9 @@ and above generally producing "random" scattered blending. Unlike the Biome choo
 to the actual frequency used internally.
 * `amplitude` - The amplitude of blending. This basically defines "how much" biomes should be blended. (for example, a 
 value of 16 will create an approximately 16-block wide blended zone between biomes)  
+* `terrain` - Blend option for terrain.
+    * `base` - Distance to blend base terrain between biomes. Must be a power of 2 from 4 to 16. (`4`, `8`, or `16`).
+    * `elevation` - Distance to blend elevation between biomes.  Must be a power of 2 from 4 to 16. (`4`, `8`, or `16`).
 
 ### erode
 Options for erosion. Erosion inserts a custom BiomeGrid at locations where the square of the erosion noise
@@ -118,6 +127,13 @@ are all used once, and only once.
     * `biome-x` - What color channel to use for BiomeGrid X selection (image exports as `red`)
     * `biome-z` - What color channel to use for BiomeGrid Z selection (image exports as `green`)
     * `zone` - What color channel to use for Biome Zone selection (image exports as `blue`)  
+
+### grid-options
+Options for BiomeGrid configuration
+* `type` - The type of BiomeGrid. May be either `STANDARD` or `RADIAL`.
+* `radial` - Options for the `RADIAL` grid type
+    * `radius` - Radius of the internal BiomeGrid
+    * `internal-grid` - BiomeGrid to use inside the radius.
 
 ***
 
