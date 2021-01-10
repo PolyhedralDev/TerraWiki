@@ -1,6 +1,13 @@
 TerraScript syntax is very similar to JavaScript and other C-like syntax languages. If you have worked with such
 languages, TerraScript will feel very familiar. If not, TerraScript is still very simple to learn!
 
+# ID
+Each script must begin with an `id` statement. An ID statement has the following syntax:
+```js
+id "identifier";
+```
+The `identifier` portion must be a unique string. It will be used to identify the script in configs.
+
 # Functions
 A function is an *expression* that performs an action using *arguments*, and (optionally) *returns* a value.
 
