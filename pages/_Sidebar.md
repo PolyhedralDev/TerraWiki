@@ -28,5 +28,6 @@
 * [Noise](./Noise) 
 * [List o' Noise Equations](./List-o'-Noise-Equations)
 * [Weighted Pools](./Weighted-Pools)
-## Functions & Variables list
+## Noise & Functions
 * [Functions & Variables](./Functions-and-Variables)
+* [Noise Configuration](./Noise-Options)
