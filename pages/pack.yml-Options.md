@@ -56,29 +56,8 @@ location will be eroded.
 This configuration section contains options for the noise functions to use in world generation. Each entry defines a
 custom noise function that may be invoked inside noise equations.
 
-* `dimensions` - The number of dimensions for this noise function. Should be either 2 (takes 2 arguments) or 3 (takes 3
-arguments). Defaults to 3.
-* `type` - The type of noise to use. Currently, supported values are `OpenSimplex2`, `OpenSimplex2S`, `Perlin`,
-`Cellular`, `Value` and `ValueCubic`. Defaults to `OpenSimplex2`.
-* `frequency` - The frequency of this noise function. Higher values "zoom in", lower values "zoom out". Defaults to
-`0.02`.
-* `offset` - The amount by which to offset this noise function from the world seed. Offsetting a noise function makes
-it generate completely different results than others with identical parameters (because it changes the seed). Defaults
-to 0.
-* `fractal` - Options for fractal noise. Fractal noise "stacks" multiple noise functions of different frequencies, to
-make noisier noise.
-    * `type` - The fractal algorithm to use. Supported values are `FBm` (Brownian Motion), `None` (No Fractal),
-    `Ridged`, `PingPong`, `DomainWarpIndependent`, and `DomainWarpProgressive`. Defaults to `FBm`.
-    * `octaves` - The number of fractal octaves to use. Defaults to 1.
-    * `gain` - The gain (multiplier for the magnitude of each octave) Defaults to 0.5.
-    * `lacunarity` - The fractal lacunarity. Defaults to 2.0.
-    * `ping-pong` - The ping-pong weight. Only applies if using the `PingPong` fractal type. Defaults to 2.0.
-    * `weighted-strength` - Sets the weighting of fractal octaves, for non-DomainWarp fractal types.
-* `cellular` - Options for the Cellular noise variant.
-    * `distance` - The distance function to use for cells. Supported values are `Euclidean`, `Manhattan`,
-    `EuclideanSq`, and `Hybrid`. Defaults to `EuclideanSq`.
-    * `return` - The return type when calculating noise. Supported values are `CellValue`, `Distance`, `Distance2`,
-    `Distance2Add`, `Distance2Sub`, `Distance2Mul`, and `Distance2Div`. Defaults to `Distance`.
+Each entry is a key-value pair, where the key is the identifier to use for the noise function, and the value is
+a [Noise Configuration](./Noise-Options).
 
 <details>
 <summary>Example Noise Configuration</summary>

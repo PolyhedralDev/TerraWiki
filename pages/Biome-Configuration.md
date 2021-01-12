@@ -64,7 +64,7 @@ Various options that define the Flora to generate in this biome.
 This value must be included, and can be abstracted.   
 ### Layer Options:
 * `density` - The chance (per 100) each block will attempt to generate Flora. This value may be a decimal.
-* `simplex-frequency` - Frequency of the Simplex noise generator.
+* `distribution` - [Noise Configuration](./Noise-Options) defining flora placement. Defaults to 2D white noise.
     If this value is zero, or if it is not included, a random distribution will be used instead.
 * `items` - Contains a weighted pool of Flora items to generate in this layer. Key = flora ID, value = weight.
     IDs may be from [pre-included](./Included-Flora) flora, or [custom](./Flora-Configuration) flora.
@@ -108,6 +108,7 @@ A list of tree layers to include in this biome.
 ### Layer Options
 * `density` - The chance (per 100) every fourth block will attempt to generate a Tree. This value may be a decimal.    
     (Since this value is every *fourth* block, it can be thought of as out of 400).
+* `distribution` - [Noise Configuration](./Noise-Options) defining tree placement. Defaults to 2D white noise.
 * `items` - Contains a weighted pool of Tree items to generate in this layer. Key = tree ID, value = weight.
     IDs may be from [pre-included](./Terra-Tree-Types) flora, or [custom](./Tree-Configuration) flora.
 * `y` - Height restrictions for this Tree object. 

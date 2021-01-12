@@ -16,16 +16,8 @@ A list of palette layers. Each layer has a block layout, and can be configured t
 equal to the sum of the depths of all previous layers.    
 
 The last layer of a palette will be repeated infinitely, regardless of its `layers` option.
-## seed
-The seed used in the pseudorandom number generator/Simplex generator. If the seed for two palettes is the same, and they
-have an equal number of materials in each layer, the materials in the palettes will line up.
-
-## simplex
-Whether to use Simplex noise in this palette. If true, the palette will use a Simplex noise generator to pull blocks
-from layers. If false or not included, a pseudorandom number generator will be used.
-
-## frequency
-The frequency to use for the Simplex generator. Lower values produce more "blob-like" selections. Defaults to 0.02.
+## noise
+A [Noise Configuration](./Noise-Options) that defines placement of blocks in this palette. Defaults to 3D white noise.
 
 ***
 
