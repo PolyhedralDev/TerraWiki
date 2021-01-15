@@ -48,7 +48,7 @@ Default: `1`
 
 #### `gain`
 `fractal.gain` controls the fractal gain. The gain sets the amplitude multiplier of each subsequent noise function.
-For example, the default gain of `0.5` would cause an input noise function to have noise added with half the frequency, then one
+For example, the default gain of `0.5` would cause an input noise function to have noise added with half the amplitude, then one
 quarter, then one eighth, etc.
 
 Defualt: `0.5`
