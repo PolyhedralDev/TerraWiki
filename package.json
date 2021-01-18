@@ -1,0 +1,26 @@
+{
+  "name": "terra",
+  "version": "0.0.1",
+  "description": "A platform agnostic data-driven world generator",
+  "main": "index.js",
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "repository": "https://github.com/PolyhedralDev/TerraWiki/Terra",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.8.0",
+    "@vuepress/plugin-back-to-top": "^1.8.0",
+    "@vuepress/plugin-medium-zoom": "^1.8.0",
+    "vuepress": "^1.5.3",
+    "vuepress-plugin-clean-urls": "^1.1.2",
+    "vuepress-plugin-container": "^2.1.5",
+    "vuepress-plugin-nprogress": "^1.1.8",
+    "vuepress-plugin-smooth-scroll": "^0.0.10"
+  }
+}
