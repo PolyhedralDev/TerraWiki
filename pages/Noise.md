@@ -1,3 +1,6 @@
+
+[//]: # (Noise configuration)
+
 Noise in Terra generally means either Simplex or Simplex Fractal noise. Simplex noise is a form of Gradient noise.   
 
 ## Gradient Noise

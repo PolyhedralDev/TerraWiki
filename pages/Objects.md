@@ -1,3 +1,7 @@
+
+[//]: # (Object configuration)
+[//]: # (Objects)
+
 This page details common values for all Terra objects.
 
 ## id

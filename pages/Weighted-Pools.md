@@ -1,3 +1,7 @@
+
+[//]: # (Weighted Pool)
+
+
 A weighted pool is a way to randomly select one of many objects from a "pool" based on "weight".
 
 ## Pools

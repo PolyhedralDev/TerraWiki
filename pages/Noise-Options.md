@@ -117,7 +117,7 @@ Default: `None`
 For linear normalization, if a function output in the range `[0, 1]`, a configuration to normalize to `[-1, 1]` would
 look like this:
 ```yaml
-normal:
+linear:
   min: 0
   max: 1
 ```

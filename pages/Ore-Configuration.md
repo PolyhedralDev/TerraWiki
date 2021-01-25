@@ -1,3 +1,7 @@
+
+[//]: # (Ore Configuration)
+[//]: # (Ores Configuration)
+
 Ores are materials that generate in veins throughout the world. Per Terra's rather loose definition, they do not even
 necessarily need to be made of ore, or even underground! Veins generate as deformed spheres, which is basically a sphere
 with its radius stretched and compressed at different points using noise. To experiment with this concept

@@ -1,3 +1,7 @@
+
+[//]: # (pack.yml)
+[//]: # (pack configuration)
+
 `pack.yml` is a required file located in the root of all Terra config packs. It defines universal pack options like biome
 blending, biome selection, and erosion.
 

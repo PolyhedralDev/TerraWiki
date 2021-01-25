@@ -180,6 +180,8 @@ Arguments:
 Returns: `STRING` - The ID of the biome, E.G. `"ARID_MOUNTAINS"`.
 
 
+[//]: # (TerraScript Functions)
+
 ## getBlock
 The getBlock function checks the Block State at a location. **It should NOT be used in regular structures!** 
 

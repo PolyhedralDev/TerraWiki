@@ -1,3 +1,6 @@
+
+[//]: # (TerraScript Basics)
+
 ## What is TerraScript?
 TerraScript is a custom scripting language with JavaScript-like syntax designed for writing custom structures. 
 It is simple to learn and easy to use, and incredibly powerful at the same time. You can use TerraScript for anything

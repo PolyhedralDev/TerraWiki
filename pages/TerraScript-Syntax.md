@@ -1,3 +1,7 @@
+
+[//]: # (TerraScrip Syntax)
+[//]: # (TerraScript Tutorial)
+
 TerraScript syntax is very similar to JavaScript and other C-like syntax languages. If you have worked with such
 languages, TerraScript will feel very familiar. If not, TerraScript is still very simple to learn!
 
