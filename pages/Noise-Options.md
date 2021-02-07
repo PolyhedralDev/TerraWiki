@@ -1,5 +1,17 @@
-Wherever you see a "noise options" section in your config, you can define a noise function there, using the following
+Wherever you see a "noise options" section in your config, you can define a noise sampler there, using the following
 values:
+
+## `sampler-type`
+The type of sampler to use. Included samplers:
+* `NOISE` - Noise function. See the [Noise Options] section for configuration options for noise functions.
+* `DOMAIN_WARP` - Domain warp layer. This sampler takes an input noise function and warps it using a warp function. See
+the [Domain Warp Options] section for configuration options for domain warp.
+* `IMAGE` - Pull noise from an image. See the [Image Options] section for configuration options.
+* `NORMALIZER` - Normalize an input function via linear or normal redistribution. See [Normalizer Options] for
+configuration options.
+
+# Noise Options
+
 ## `type`
 The type of noise algorithm to use. Included noise algorithms:
 * Simplex - `OpenSimplex2` or `OpenSimplex2S` - Gradient noise (`2S` is the Smooth variant of OpenSimplex).
@@ -51,7 +63,7 @@ Default: `1`
 For example, the default gain of `0.5` would cause an input noise function to have noise added with half the amplitude, then one
 quarter, then one eighth, etc.
 
-Defualt: `0.5`
+Default: `0.5`
 
 #### `lacunarity`
 `fractal.lacunarity` controls the fractal lacunarity. The lacunarity sets the frequency multiplier of each subsequent
@@ -121,3 +133,54 @@ linear:
   min: 0
   max: 1
 ```
+
+# Domain Warp Options
+
+## `function`
+The source function. This function will be used to retrieve noise values.
+## `warp`
+Function to use for domain warping. The result of this function will be added to the X, Y, and Z inputs of the
+`function` parameter.
+## `amplitude`
+The amplitude of the domain warp. This value is the maximum an input point may be translated (provided that the warp
+function is bounded from `[-1, 1]`)
+
+# Image Options
+
+## `image`
+The path of the image to use, relative to the config root.
+
+## `channel`
+The channel to get values from. Valid channels are:
+* `RED` - Red channel of the image
+* `GREEN` - Green channel of the image
+* `BLUE` - Blue channel of the image
+* `ALPHA` - Alpha channel of the image
+* `GRAYSCALE` - Average of RED GREEN and BLUE channels.
+
+## `frequency`
+The input coordinates are multiplied by this value, allowing for image scaling.
+
+# Normalizer Options
+
+## `type`
+The type of normalizer to use. Normalizer types included:
+* `LINEAR` - Linear redistribution of input function
+* `NORMAL` - Normal redistribution of input function (Normal -> Continuous)
+
+## LINEAR Options
+Linear redistribution redistributes the input from `[min, max]` to `[-1, 1]`.
+## `min`
+Minimum input value
+
+## `max`
+Maximum input value
+
+## NORMAL Options
+Normal redistribution redistributes the input from a normal distribution with mean `mean` and standard deviation
+`standard-deviation` to a continuous distribution with range `[-1, 1]`.
+## `mean`
+The mean of the input function.
+
+## `standard-deviation`
+The standard deviation of the input function.

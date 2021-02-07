@@ -1,7 +1,7 @@
 This guide will outline process of creating your own world!
 This guide assumes that you have a running minecraft server with Terra installed and working.
 
-**This guide is a work in progress.**
+**This guide is a work in progress. It is likely to be out of date.**
 
 # Preparation
 

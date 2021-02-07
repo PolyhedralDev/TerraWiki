@@ -7,6 +7,13 @@ Biomes support all Terra [Object Options](./Objects).
 
 # Main options
 
+## tags
+A list of tags to be used in Biome Pipeline selection. Tags may be any string, and a biome may have any number
+of tags.
+
+## color
+An integer representation of a color to be used in image selection. Example: `0xffffff` = white.
+
 ## noise-equation
 Noise equation to generate terrain with. Positive values produce solid terrain, negative values produce negative
 terrain. Variables and functions:
@@ -235,12 +242,6 @@ the corresponding IDs have been set up.
 # Super-Secret Advanced Options
 These options are for advanced users that wish to have more control over biomes.
 
-## prevent-smooth
-Enabling this option prevents this biome from receiving an additional layer of smoothing on top of the standard 
-4x4x4 trilinear interpolation. Enabling this option grants finer control over terrain generation, but will introduce
-terrain artifacts if you don't know how to properly handle the lack of extra smoothing!
-This option defaults to false, and cannot be abstracted.
-
 ## ocean
 Options for the ocean in this biome.
 * `level` - Y-value at which to generate oceans. Ocean will be generated at locations that would be air, and are below
@@ -264,6 +265,19 @@ Options for the "elevation" feature, used to raise/lower areas in high resolutio
 2-dimensional. This means that only `x` and `z` exist as variables, and only `noise2` is available as a function. The
 standard noise equation receives the current Y-value, *plus* the result of this equation during generation, so the
 elevation equation raises/lowers the terrain height based on its value for any x/z coordinate pair.
-* `interpolation` - Whether to enable elevation interpolation for this biome. Do not change this value from its default
-(true) unless you understand what this means and know what you are doing! There are very few circumstances where this
-value should be false.
+* `weight` - Weight of this biome's elevation equation. Higher weights take priority during elevation blending.
+
+## blend
+Per-biome blending options
+* `distance` - Distance to use for blending. Higher distance = more blending. Actual distance = distance*step. By
+default, this is 4.
+* `step` - Step for sampling blend points. Higher values = lower resolution blending. By default, this is 4.
+* `weight` - Weight of this biome. Higher weights take priority during blending.
+
+## variables
+Identical to the `variables` option in [pack.yml](./pack.yml-Options). These may be used to define custom variables
+per-biome, or to override variables per-biome.
+
+## functions
+Identical to the `functions` option in [pack.yml](./pack.yml-Options). These may be used to define custom functions
+per-biome, or to override functions per-biome.
