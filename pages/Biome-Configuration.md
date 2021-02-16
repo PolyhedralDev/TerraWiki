@@ -22,8 +22,8 @@ terrain. Variables and functions:
 * `z` - Current z-coordinate
 * All [defined noise functions](./pack.yml-Options#noise) can be accessed via their ID.
 * Terra includes most standard mathematical functions (trig functions, `max(a, b)`, `min(a, b)`, `floor(x)`, `ceil(x)`,
-`round(x)`, etc.) If you want another function implemented, submit a PR to our
-[Parsii fork](https://github.com/PolyhedralDev/parsii), or create an issue requesting it.    
+`round(x)`, etc.) If you want another function implemented, submit a PR to
+[Paralithic](https://github.com/PolyhedralDev/Paralithic) (our expression evaluator), or create an issue requesting it.    
 
 More info about setting up equations [here](./My-First-Noise-Equation).   
 This value must be included, and can be abstracted.
