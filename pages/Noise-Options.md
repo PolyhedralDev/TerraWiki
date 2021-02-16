@@ -167,6 +167,10 @@ The input coordinates are multiplied by this value, allowing for image scaling.
 The type of normalizer to use. Normalizer types included:
 * `LINEAR` - Linear redistribution of input function
 * `NORMAL` - Normal redistribution of input function (Normal -> Continuous)
+* `CLAMP` - Clamp input function between a max/min.
+
+## `function`
+Function to normalize.
 
 ## LINEAR Options
 Linear redistribution redistributes the input from `[min, max]` to `[-1, 1]`.
@@ -184,3 +188,12 @@ The mean of the input function.
 
 ## `standard-deviation`
 The standard deviation of the input function.
+
+## CLAMP Options
+The clamp normalizer clamps an arbitrarily ranged input function to a maximum/minimum value. Any value above the maximum
+will return the maximum, and any value below the minimum will return the minimum.
+## `min`
+Minimum value
+
+## `max`
+Maximum value
