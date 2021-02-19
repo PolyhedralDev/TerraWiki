@@ -192,7 +192,7 @@ Factor to multiply all kernel values by. Useful for keeping kernels readable. De
 ## `function`
 Noise function to apply the kernel to.
 
-#Expression Options
+# Expression Options
 
 ## `equation`
 The equation to use for this noise function. The variables `x`, `y`, and `z`, along with
