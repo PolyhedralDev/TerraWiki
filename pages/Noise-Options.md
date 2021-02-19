@@ -8,6 +8,7 @@ The type of sampler to use. Included samplers:
 * Linear - Linear normalizer.
 * Normal - Normal (normal -> continuous) normalizer.
 * Clamp - Clamp normalizer.
+* Expression - Paralithic expression noise function  
 * Image - Pull noise from an image.
 * DomainWarp - Domain-warp a function with another function.
 * FBM - Fractal Brownian Motion.
@@ -190,3 +191,16 @@ Factor to multiply all kernel values by. Useful for keeping kernels readable. De
 
 ## `function`
 Noise function to apply the kernel to.
+
+#Expression Options
+
+## `equation`
+The equation to use for this noise function. The variables `x`, `y`, and `z`, along with
+any defined in the `variables` key, are registered, along with the noise functions defined in
+the `functions` key.
+
+## `functions`
+A map of noise functions. These functions are registered for use in the equation.
+
+## `variables`
+A map of variables. These variables are registered for use in the equation.
