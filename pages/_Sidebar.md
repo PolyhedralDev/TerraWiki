@@ -1,6 +1,6 @@
 ## [Home](./)
 ## About
-* [Getting Started](./Getting-Started)
+* [Creating a Pack](./Getting-Started)
 * [Config Packs](./Config-Packs)
 * [Block Palettes](./Block-Palettes)
 * [Biome Selection](./Biome-Selection)

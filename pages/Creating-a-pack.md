@@ -109,7 +109,3 @@ Biomes by default have a water level at height 62 and will fill the empty area b
     ocean:
       level: -1
 to the biome config.
-
-
-
-

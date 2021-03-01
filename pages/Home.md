@@ -10,7 +10,7 @@ Terra's config system is intuitive and *relatively* simple to learn, while also 
 world generator.  
    
 ## How do I Get Started?
-To get started with Terra, take a look at our [[Getting Started]] guide! It will walk you through the basics of
+To get started with Terra, take a look at our [[Create a pack]] guide! It will walk you through the basics of
 configuration, and provide a simple base config to get started with.  
 
 ## What if I don't want to configure everything myself?
