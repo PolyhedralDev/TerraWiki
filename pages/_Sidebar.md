@@ -1,7 +1,8 @@
 ## [Home](./)
 ## About
-* [Creating a Pack](./Getting-Started)
 * [Config Packs](./Config-Packs)
+* [Creating a Pack](./Creating-a-pack)
+* [Configuring Your Pack](./Configuring-Your-Pack)
 * [Block Palettes](./Block-Palettes)
 * [Biome Selection](./Biome-Selection)
 * [Included Trees](./Terra-Tree-Types)
