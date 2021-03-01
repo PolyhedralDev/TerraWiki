@@ -9,7 +9,9 @@ If you haven't already, check out [Config Packs](./Config-Packs) for more inform
 
 # Preparation
 
-This section goes over the basic setup for a Terra configuration pack, including duplicating an existing pack to serve as a base, and setting up a workspace for working with packs. Before you begin, ensure you have a suitable test server with Terra installed.
+This section goes over the basic setup for a Terra configuration pack, including duplicating an existing pack to serve
+as a base, and setting up a workspace for working with packs. Before you begin, ensure you have a suitable test server
+with Terra installed.
 
 > Do not follow the following steps on any production server!
 
@@ -26,13 +28,16 @@ This section goes over the basic setup for a Terra configuration pack, including
 
     2. Extract the contents of the `default.zip` directory into a new folder. 
 
-        > Alternatively you can use the template configuration pack provided by Astrash, which provides minimal configurations and annnotated explanations. The GitHub repository can be found [here](https://github.com/Astrashh/TerraTemplatePack).
+        > Alternatively you can use the template configuration pack provided by Astrash, which provides minimal
+        configurations and annnotated explanations. The GitHub repository can be found
+        [here](https://github.com/Astrashh/TerraTemplatePack).
 
     3. Rename this new folder whatever want, this tutorial will call the new config folder `example`.
 
 4. Open the new pack directory in a text editor of your choice.
 
-    > We highly recommend using a text editor like VSCode that provides support for YAML syntax highlighting and file browsing support!
+    > We highly recommend using a text editor like VSCode that provides support for YAML syntax highlighting and file
+    browsing support!
 
 5. Set up a new ID for your new pack:
 
@@ -52,7 +57,8 @@ config, as well as the `author` to your username like so:
 6. Configure your test server's world to use the new config as a generator:
     1. Open `bukkit.yml` (Found in the root of the server).
 
-    2. Assign your new generator to the default world (known simply as *world*) by **adding the following lines to the end of the file**:
+    2. Assign your new generator to the default world (known simply as *world*) by **adding the following lines to the
+    end of the file**:
     ```yaml
     worlds:
       world:
@@ -63,5 +69,6 @@ config, as well as the `author` to your username like so:
 your new config pack!
 
 ### Let's Recap
-You now have a copy of the default or template config , called `EXAMPLE`. It's running on your test server, and is assigned to the
+You now have a copy of the default or template config , called `EXAMPLE`. It's running on your test server, and is
+assigned to the
 overworld. You have a workspace in VS Code set up to work on this new config.
