@@ -1,7 +1,7 @@
 ## [Home](./)
 ## About
 * [Config Packs](./Config-Packs)
-* [Creating a Pack](./Creating-a-pack)
+* [Creating a Pack](./Creating-a-Pack)
 * [Configuring Your Pack](./Configuring-Your-Pack)
 * [Block Palettes](./Block-Palettes)
 * [Biome Selection](./Biome-Selection)
