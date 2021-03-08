@@ -14,7 +14,6 @@
 
 [Weighted Pools](./Weighted-Pools)  
 [Block Palettes](./Block-Palettes)  
-[Biome Selection](./Biome-Selection)  
 [Using Custom Blocks](./Custom-Blocks)  
 
 [TerraScript](./TerraScript)  
@@ -24,7 +23,6 @@
 [Noise Equation](./My-First-Noise-Equation)  
 [Advanced Noise Equations](./Multi-layered-Noise-Equations)  
 [List o' Noise Equations](./List-o'-Noise-Equations)  
-
 
 ---
 
