@@ -1,78 +1,182 @@
-
-# Configuring Your Pack
-This section overviews the many options available to adjust world generation in your new config.
-
-In this section, we will go through some basic changes to the world generation to explain you all the different settings.
-When adjusting your configuration, remember that most values can be reloaded live! If your server is in debug mode,
-simply run `/te reload` to reload all configurations. You will need to fly into un-generated chunks to view any changes.
-# Adjusting the Generator
-
-Terra has a vast amount of options for configuring world generation from the ground up.
-This tutorial will begin at the largest scale, then narrow down into finer aspects of generation.
-
-## The Largest Scale: "The Zone"
-A Biome Zone holds Biome Grids (overviewed later in this page). Zones generally define large differences in terrain,
-for example, in the image below, which shows a zone, there are 5 grids:
-* Ocean
-* Beach
-* Land
-* Mountains Low
-* Mountains High    
-
-<img height="600" src="https://i.imgur.com/ayb9Ygc.png" alt="BiomeZone">    
-
-Each section of the zone contains a BiomeGrid with biomes containing unique types of terrain. For example, all biomes
-that fall under the OCEAN category should probably be grouped together in the world, so they would be arranged in the
-OCEAN grid, then put in the zone together.     
-   
-      
-The Biome Zone is configured in `pack.yml`. See the [pack.yml page](./pack.yml-Options#grids) for more information.
-The zone in the image above would be configured as:
-```yaml
-grids:
-  - OCEAN
-  - OCEAN
-  - BEACH
-  - BEACH
-  - LAND
-  - LAND
-  - MOUNTAINS_LOW
-  - MOUNTAINS_HIGH
+```diff
+! This section is incomplete !
 ```
 
-The layout of the list is important! Grids that are adjacent in the Biome Zone will be adjacent in the world.
-Using the above example, the generator must place BEACH between the OCEAN and LAND grids, MOUNTAINS_HIGH must border MOUNTAINS_LOW,
-and MOUNTAINS_LOW must border either MOUNTAINS_HIGH or LAND. Repeating grids allows to make larger areas of e.g. OCEAN.
+###### CONTENTS
 
-The Biome Zone can be a maximum of 4096 grids long.   
+- [Anatomy of a Pack](#anatomy-of-a-pack)
+  - [Pack Structure](#pack-structure)
+  - [Sub-folders](#sub-folders)
+- [Adjusting the Generator](#adjusting-the-generator)
+  - [Reloading edits](#reloading-edits)
 
-Since there are already many default icy, ocean or mountain biomes (and you can create tons more), it would not be
-meaningful to start manually configuring which biomes can be next to each other at the largest scale. So let's rather define a collection of biomes that make up an environment, called a biome "grid". You could have an "ocean" grid, a "beach" grid or a "low mountain" and a "high mountain" grid. Each grid then will be built of all the biomes that you think make sense for that grid. A biome can appear in several grids. For your Zone, you can then define which of these grids can be next to each other in a list. This list can be found for the default pack in `\plugins\Terra\packs\default\pack.yml`. Details how to configure this list can be found here: [[Biome-Selection#biome-zones]].
+This section overviews the many options available to adjust world generation in your new config.
 
-Terra will go through that list and make sure that those grids are next to each other only in the sequence listed in pack.yml. While there is a complex randomization happening the background to determine which biome in the end will be next to each other, the rules of the zone's grid list will always be followed.
+In this section, we will go through the typical workflow involved in making changes to a pack, and cover some basic
+changes to the world generation.
 
-To start with, it's highly recommended to have Ocean biomes on the one end of the list and Mountain on the other with flat land in the middle, as in the default pack.
+If you aren't sure where to get started with creating a pack, check out [Creating a Pack](./Creating-a-Pack).
 
-## Biome Grids
-<img height="250" src="https://i.imgur.com/FSmfxh4.png" alt="BiomeGrid">
-Coming to the next level of detail now, you have to configure the grids that you listed in your pack.yml. Essentially, you can now define a 2-D pattern of biomes that you think look good next to each other in order to make the grid look nice. For each entry on your list in pack.yml, you need to have a file in `/plugins/Terra/packs/default/grids/` such as `ocean.yml`
+### Anatomy of a Pack
 
-Within this file, there is a 2-dimensional list (hence a grid) of biomes that defines all the biomes that can appear in that grid. If biomes in this list are next to each other (vertically or horizontally), they will also have a chance to be next to each other in the real world. The neighboring biome will not be chosen by jumping diagonally.
+Terra configuration packs can be divided into sub-folders each containing different configuration file types. Every pack
+will require an assigned ID, used for setting up world generators and loading everything correctly. If you have already
+read through [Creating a Pack](./Creating-a-Pack), then you should already know how to set up the ID for a pack.
 
-This list can be maximum the same length as the Zone file grid list (4096) in either direction, so quite huge if you need to. You can find more information about Biome Grids here: [[Biome-Selection#biome-grids]]
+#### Pack Structure
 
-## Managing individual Biomes
+Here is what to expect when looking inside a Terra config pack. You can
+expand the following sections to read descriptions of each:
 
-Biomes have several components, See [[Biome-Configuration]] for details. Some introduction of components here:
+<details>
+<summary>:page_facing_up: <code>pack.yml</code></summary><br>
 
-### Surface formation
+>[Pack Manifest](./pack.yml-Options) documentation
 
-Minecraft worlds are dimensioned by X, Y and Z coordinates. Y is the height, the other two are North-South (X) and East-West (Z). Terra uses a so-called [noise function](./My-First-Noise-Equation) that calculates how the world looks like. 
+If you followed [Creating a Pack](./Creating-a-Pack), then you should already be familiar with pack.yml. The pack
+manifest controls broad scale things like *how biomes are arranged*, and defines things integral to a pack such as
+the *author, version and pack name*.
 
-### Water level
+---
+</details>
 
-Biomes by default have a water level at height 62 and will fill the empty area below that height with water (except caves of course). If you do not want to have any water level in your biome, add 
+<details>
+<summary>:file_folder: <code>biomes</code></summary><br>
 
-    ocean:
-      level: -1
-to the biome config.
+> The `biomes` folder contains user-defined [Biome Configurations](./Biome-Configuration).
+
+Aside from pack.yml, you will probably be configuring the bulk of your work inside this folder, as it contains
+everything that makes biomes unique.
+
+Biomes generally take many assets defined in other folders (or even other biomes!) and combines them together to
+define a singular unique biome. Many biomes can share aspects such as the blocks that make up the landscape, what
+trees within the biome, and how ores spawn etc. For a full list of biome parameters you can check out the
+[Biome Configuration](./Biome-Configuration) documentation.
+
+---
+</details>
+
+<details>
+<summary>:file_folder: <code>carving</code></summary><br>
+
+> The `carving` folder contains user-defined [Carver Configurations](./Carver-Configuration).
+
+Carver configurations define the behaviour of basic caves in Terra. Biomes can pick and choose which carvers they
+take from this folder to use when generating.
+If you want to change how caves look, then is the folder to go to.
+
+---
+</details>
+
+<details>
+<summary>:file_folder: <code>flora</code></summary><br>
+
+> The `flora` folder contains user-defined [Flora Configurations](./Flora-Configuration).
+
+Flora configurations define aspects like grass and flowers that will be used within biome configurations, but can also
+be generalized to other aspects of generation such as sugarcane, lily-pads, water springs etc.
+
+Flora is generally configured to be a block or stack of blocks that only spawns under certain conditions. For example
+sugarcane would only generate on grass and sand that is adjacent to water, and can only replace air blocks. You can
+think of flora like a *post-processor*.
+
+If you want to configure your own flora, you would do it in this folder. Alternatively, Terra also provides various
+[preset flora configs](./Included-Flora) included within the plugin.
+
+---
+</details>
+
+<details>
+<summary>:file_folder: <code>ores</code></summary><br>
+
+> The `ore` folder contains user-defined [Ore Configurations](./Ore-Configuration).
+
+Ore configurations determine how various individual deposits of blocks behave. Aspects like what block deposits are made
+of, and how large deposits are can be controlled here. Note that ore configurations pertain to how singular deposits
+behave, meaning that aspects like *where* and *how frequent* deposits are not handled in this folder (Those factors are
+defined within biomes).
+
+Another thing to note is that aspects like dirt and granite pockets are also defined here, meaning that ore
+configurations are not specific to just ores.
+
+---
+</details>
+
+<details>
+<summary>:file_folder: <code>palettes</code></summary><br>
+
+>The `palettes` folder contains user-defined [Palette Configurations](./Palette-Configuration).
+
+---
+</details>
+
+<details>
+<summary>:file_folder: <code>structures</code></summary><br>
+
+The `structure` folder contains several Terra defined sub-directories as follows:
+
+* :file_folder:`trees`
+
+    >[Tree Configuration](./Tree-Configuration) documentation
+
+* :file_folder:`structures`
+  
+    >[Structure Configuration](./Structure-Configuration) documentation
+
+* :file_folder:`loot`
+
+    Loot tables
+
+* :file_folder:`data`
+
+    >[Terrascript](./TerraScript) documentation
+
+---
+</details>
+
+#### Sub-folders
+
+Just about every configuration file within each pack sub-directory can be further nested in user-defined folders for
+organization. This can be very useful for pack development as it will make files much easier to locate and edit, and is
+a good practice to do to make things neater. For example, here is what an organized biome folder structure might look like:
+
+```diff
+# Terra defined folders
+pack
+└ biomes
+# User defined folders
+  ├ land
+  │ ├ hot
+  │ │ └ desert.yml
+  │ ├ temperate
+  │ │ ├ forest.yml
+  │ │ └ plains.yml
+  │ └ cold
+  │   └ tundra.yml
+  └ water
+    ├ ocean.yml
+    └ river.yml
+```
+
+### Adjusting the Generator
+
+Terra has a vast amount of options for configuring world generation from the ground up. We don't expect you to be able
+to pick up *every little aspect* as there is a lot to take in, but you will have to put in some work grasping a handful
+of important concepts, if you're looking to develop a pack. These topics include:
+
+- [Noise](./Noise)
+- [Objects](./Objects)
+- [Weighted Pools](./Weighted-Pools)
+- [Biome Pipeline](./Biome-Pipeline)
+- [TerraScript](./TerraScript)
+
+#### Reloading edits
+
+When adjusting your configuration, you might think that you will need to restart your whole server for any changes to
+take effect. This is not the case with Terra and you can simply reload your configurations live while the server is
+running. If your server is in debug mode (which is covered in [Creating a Pack](./Creating-a-Pack)), simply run
+`/te reload` to reload all configurations.
+
+###### NOTE
+
+> You will still need to generate new chunks after reloading to preview any changes!
