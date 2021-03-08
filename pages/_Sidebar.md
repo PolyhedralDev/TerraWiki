@@ -1,16 +1,21 @@
 ##### ABOUT
 
 [Home](./)  
+[Community Packs](./Community-Packs)
 
 ###### GUIDES
 
 [Quick Start Guide](./Quick-Start-Guide)  
+[Creating a Terra World](./Creating-a-Terra-World)  
+
 [Config Packs](./Config-Packs)  
 [Creating a Pack](./Creating-a-Pack)  
 [Configuring Your Pack](./Configuring-Your-Pack)  
 
 [Weighted Pools](./Weighted-Pools)  
 [Block Palettes](./Block-Palettes)  
+[Biome Selection](./Biome-Selection)  
+[Using Custom Blocks](./Custom-Blocks)  
 
 [TerraScript](./TerraScript)  
 [Working with Structures](./Working-With-Structures)  
@@ -20,8 +25,6 @@
 [Advanced Noise Equations](./Multi-layered-Noise-Equations)  
 [List o' Noise Equations](./List-o'-Noise-Equations)  
 
-[Biome Selection](./Biome-Selection)  
-[Using Custom Blocks](./Custom-Blocks)  
 
 ---
 

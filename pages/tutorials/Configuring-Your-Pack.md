@@ -1,7 +1,3 @@
-```diff
-! This section is incomplete !
-```
-
 ###### CONTENTS
 
 - [Anatomy of a Pack](#anatomy-of-a-pack)
@@ -159,6 +155,10 @@ pack
 ```
 
 ### Adjusting the Generator
+
+```diff
+! This section is incomplete !
+```
 
 Terra has a vast amount of options for configuring world generation from the ground up. We don't expect you to be able
 to pick up *every little aspect* as there is a lot to take in, but you will have to put in some work grasping a handful
