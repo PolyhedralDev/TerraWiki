@@ -22,17 +22,21 @@ will be located, including the `DEFAULT` pack which is automatically installed w
 
 2. Once your pack is installed, load the pack on to the server by reloading Terra:
 
-   If you are installing the pack on a **production environment**, simply startup / restart the server.
+* If your server is **not running**, simply startup the server.
 
-    > If your server is already running, **do not under any circumstances use the /reload command, or any third party
+* If your server is **already running**:
+
+  * If you are installing the pack on a **production environment**, restart the server.
+
+    > **Do not under any circumstances use the /reload command, or any third party
     >plugin
     > to reload your server,** simply restart the server instead!
-    [\[Why?\]](https://matthewmiller.dev/blog/problem-with-reload/)
+        [\[Why?\]](https://matthewmiller.dev/blog/problem-with-reload/)
 
-    If you are installing the pack on a **test environment** and *debug mode* is enabled (covered in
-    [Creating a Pack](./Creating-a-Pack)),
-   you can run the command `/terra reload` to reload Terra if your server is already running. *Debug mode should only be
-   enabled in a test environment!*
+  * If you are installing the pack on a **test environment** and *debug mode* is enabled (covered in
+    [Creating a Pack](./Creating-a-Pack)), you can run the command `/terra reload` to reload Terra.
+
+    > Debug mode should only be enabled in a test environment!
 
 3. If your pack has loaded correctly, then you should see this message in console after reloading Terra:
 
