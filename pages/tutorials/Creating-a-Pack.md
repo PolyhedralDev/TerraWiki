@@ -48,8 +48,9 @@ out the [Quick Start Guide](./Quick-Start-Guide) before continuing.
 
     ###### EDITOR TIP
 
-    > We highly recommend using a text editor like VSCode that provides support for YAML syntax highlighting and file
-    > browsing support, as it will make things much more streamlined and easy for you, the config editor!
+    > We highly recommend using a text editor or IDE such as VSCode or InteliJ, which provides support for YAML syntax
+    > highlighting and file browsing support, as it will make things much more streamlined and easy for you, the config
+    > editor!
 
 5. Set up an ID for your new pack:
 
@@ -69,12 +70,13 @@ config, as well as the `author` to your username like so:
 6. Configure your test server's world to use the new config as a generator:
     1. Open `bukkit.yml` (Found in the root of the server).
 
-    2. Assign your new generator to the default world (known simply as *world*) by **adding the following lines to the
+    2. Assign your new generator to the default world  by **adding the following lines to the
     end of the file**:
 
     ```yaml
     worlds:
-      world:
+      <LEVEL NAME>: # The name of this can be found in the 'server.properties' under
+                    # the 'level-name' key. By default, level-name is set to 'world'
         generator: Terra:EXAMPLE
         # Replace 'EXAMPLE' with the ID of your config.
     ```
@@ -94,4 +96,4 @@ generate using the pack.
 ### Onwards!
 
 Once you have successfully set up your own Terra config pack, you may continue to the
-[Configuring Your Pack](./Configuring-Your-Pack) page, where we will cover how to manipulate packs.
+[Configuring Your Pack](./Configuring-Your-Pack) page, where we will cover pack configuration.

@@ -41,7 +41,7 @@ will be located, including the `DEFAULT` pack which is automatically installed w
 
 ###### TROUBLESHOOTING PACK INSTALLATION
 
->If your pack failed to load, console will display an error message outlining why the pack failed to load. Be sure to
+>If your pack failed to load, the console will display an error message outlining why the pack failed to load. Be sure to
 >read through the error and double check if you have made a mistake anywhere.
 >
 > If you're unzipping a pack into a folder, ensure that pack.yml is contained within that folder, and not nested inside

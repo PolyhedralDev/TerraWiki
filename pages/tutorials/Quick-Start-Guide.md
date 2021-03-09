@@ -8,6 +8,8 @@ The Bukkit version of Terra supports server platforms such as [Spigot](https://w
 [Purpur](https://purpur.pl3x.net/), however we highly recommend using Paper with Terra as it's the main supported
 platform. There are no guarantees other Terra will be fully functional with other platforms.
 
+> Some features require the use of Paper's extended API, and might be missing on platforms such as Spigot!
+
 If you have already installed Terra or already know how to install Bukkit plugins, you can skip to
 [Setting up a World](#setting-up-a-world).
 

@@ -16,7 +16,7 @@ If you aren't sure where to get started with creating a pack, check out [Creatin
 ### Anatomy of a Pack
 
 Terra configuration packs can be divided into sub-folders each containing different configuration file types. Every pack
-will require an assigned ID, used for setting up world generators and loading everything correctly. If you have already
+has a unique ID, used for setting up world generators and loading everything correctly. If you have already
 read through [Creating a Pack](./Creating-a-Pack), then you should already know how to set up the ID for a pack.
 
 #### Pack Structure
@@ -173,7 +173,7 @@ of important concepts, if you're looking to develop a pack. These topics include
 #### Reloading edits
 
 When adjusting your configuration, you might think that you will need to restart your whole server for any changes to
-take effect. This is not the case with Terra and you can simply reload your configurations live while the server is
+take effect. This is not the case with Terra; you can simply reload your configurations live while the server is
 running. If your server is in debug mode (which is covered in [Creating a Pack](./Creating-a-Pack)), simply run
 `/te reload` to reload all configurations.
 

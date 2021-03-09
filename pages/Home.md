@@ -19,8 +19,8 @@ yet seen in a
 world generator.
 
 Whether you're a server owner looking to spice up your server with out-of-the-box custom terrain, a developer looking to
-tweak things to better fit your vision, or a creator looking to build completely new biomes or worlds from the ground up
-, Terra can meet your world generation needs!
+tweak things to better fit your vision, or a creator looking to build completely new biomes or worlds from the ground
+up, Terra can meet your world generation needs!
 
 [//]: # (#Where can I see Terra in action?)
 [//]: # (Need to make page for showcase)

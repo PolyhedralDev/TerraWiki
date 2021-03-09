@@ -16,9 +16,7 @@
 
 ## How Bukkit handles Terra worlds
 
-Within the Bukkit version of Terra, the management of what worlds will use Terra generation is handed off to the
-Bukkit API, meaning that controlling which worlds you would like to be Terra worlds will be configured externally
-outside of Terra.
+In the Bukkit version of Terra, world management is delegated to Bukkit, meaning that generators are configured via Bukkit or a world management plugin, **not** in Terra.
 
 Bukkit uses the concept of *generator ID*s to dictate which worlds will use what generators, which is what this guide
 will be centered around configuring.
@@ -35,7 +33,7 @@ ID must match that of the pack ID!
 
 ## Setting up a Terra World
 
-When working with worlds on a Bukkit server, the main methodologies can be split into two categories: using a *world
+There are two main ways to manage worlds on a Bukkit server: using a *world
 manager* (which is a separate plugin that is designed to well.. manage worlds) - or - directly through Bukkit.
 Both methods have their own advantages which we will cover in each section.
 
