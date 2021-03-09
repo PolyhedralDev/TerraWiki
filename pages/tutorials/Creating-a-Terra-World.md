@@ -63,7 +63,7 @@ contained in). Something to note is that *without a world manager, you cannot cr
                                   # For example the default pack would be Terra:DEFAULT
     ```
 
-4. Start your server back up.
+4. Start your server.
 
 If you have already done this process before and wish to set up another world with a generator, you can simply add it to
 the `worlds` key like so:

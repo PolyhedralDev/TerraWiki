@@ -1,8 +1,15 @@
 > This guide is intended for the **Bukkit** version of Terra. Guides will be written for other platforms once they
 > mature.
 
-> If you have already installed Terra or know how to install Bukkit plugins, you can skip to
-> [Setting up a World](#setting-up-a-world).
+### Preface
+
+The Bukkit version of Terra supports server platforms such as [Spigot](https://www.spigotmc.org/),
+[Paper](https://papermc.io/), and further forks such as [Tunity](https://github.com/Spottedleaf/Tuinity) and
+[Purpur](https://purpur.pl3x.net/), however we highly recommend using Paper with Terra as it's the main supported
+platform. There are no guarantees other Terra will be fully functional with other platforms.
+
+If you have already installed Terra or already know how to install Bukkit plugins, you can skip to
+[Setting up a World](#setting-up-a-world).
 
 ### Download & Installation
 
@@ -12,10 +19,12 @@
 2. Once you have downloaded the `.jar` file from Spigot, simply place the file your `plugins` folder located inside your
 server root.
 
-3. Once the plugin has been installed start your server up.
+3. Once the plugin has been installed, start your server.
 
-    > If your server is already running, **do not under any circumstances use the /reload command, or any third party plugin
+    > If your server is already running, **do not under any circumstances use the /reload command, or any third party
+    plugin
     > to reload your server,** simply restart the server instead!
+    [\[Why?\]](https://matthewmiller.dev/blog/problem-with-reload/)
 
 4. Once the the server has restarted, check your console log for the following line to ensure everything has been
 installed correctly:
@@ -40,9 +49,10 @@ loaded correctly without issues.
 Here we will be replacing the server's default world with new world configured through the Bukkit config to use Terra as
 the new generator.
 
-We will be replacing the default `world` folder, so **ensure that you have made a backup before making any destructive changes**!
+We will be replacing the default `world` folder, so **ensure that you have made a backup before making any destructive
+changes**!
 
-We do not recommend changing the generator of an *pre-existing world*, as this will produce broken chunk borders between
+We do not recommend changing the generator of an *existing world*, as this will produce broken chunk borders between
 old and new terrain.
 
 >If you would like to use a world manager like Multiverse Core to create a world instead of manually setting it as
@@ -70,7 +80,8 @@ outlined here, please refer to [Creating a Terra World](./Creating-a-Terra-World
         generator: Terra:DEFAULT # Specifying the generator Bukkit should use for 'world'
     ```
 
-4. Either delete the pre-existing `world` folder in your server directory, or re-name it to something else (for example `world_backup`).
+4. Either delete the existing `world` folder in your server directory, or rename it to something else (for example
+`world_backup`).
 
 5. Boot your server back up.
 
