@@ -24,8 +24,10 @@ will be located, including the `DEFAULT` pack which is automatically installed w
 
    If you are installing the pack on a **production environment**, simply startup / restart the server.
 
-    > If your server is already running, **do not under any circumstances use the /reload command, or any third party plugin
+    > If your server is already running, **do not under any circumstances use the /reload command, or any third party
+    >plugin
     > to reload your server,** simply restart the server instead!
+    [\[Why?\]](https://matthewmiller.dev/blog/problem-with-reload/)
 
     If you are installing the pack on a **test environment** and *debug mode* is enabled (covered in
     [Creating a Pack](./Creating-a-Pack)),

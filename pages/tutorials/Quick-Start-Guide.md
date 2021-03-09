@@ -24,7 +24,7 @@ server root.
 3. Once the plugin has been installed, start your server.
 
     > If your server is already running, **do not under any circumstances use the /reload command, or any third party
-    plugin
+    >plugin
     > to reload your server,** simply restart the server instead!
     [\[Why?\]](https://matthewmiller.dev/blog/problem-with-reload/)
 
@@ -49,22 +49,20 @@ loaded correctly without issues.
 ### Setting up a World
 
 Here we will be replacing the server's default world with new world configured through the Bukkit config to use Terra as
-the new generator.
-
-We will be replacing the default `world` folder, so **ensure that you have made a backup before making any destructive
+the new generator. Because we are working with changes to worlds **ensure that you have made the necessary backups before making any destructive
 changes**!
 
 We do not recommend changing the generator of an *existing world*, as this will produce broken chunk borders between
 old and new terrain.
 
 >If you would like to use a world manager like Multiverse Core to create a world instead of manually setting it as
-outlined here, please refer to [Creating a Terra World](./Creating-a-Terra-World).
+>outlined here, please refer to [Creating a Terra World](./Creating-a-Terra-World).
 
 #### Procedure
 
 1. Ensure your server is not running.
 
-2. If you missed it above, please make a backup of the `world` folder in your server directory.
+2. If you missed it above, please make a backup of any relevant world folders in your server directory.
 
     >*If you're using a fresh server you won't need to worry about this*!
 
@@ -72,18 +70,19 @@ outlined here, please refer to [Creating a Terra World](./Creating-a-Terra-World
     1. Navigate to the `bukkit.yml` file which is also contained within your server directory, and open it with any text
     editor.
 
-    1. Assign your new generator to the default world (simply known by default as *world*) by **adding the following
+    1. Assign your new generator to the default world by **adding the following
     lines to the
     end of the file**:
 
     ```yaml
     worlds:
-      world: # The default Bukkit world name
-        generator: Terra:DEFAULT # Specifying the generator Bukkit should use for 'world'
+      <LEVEL NAME>: # The name of this can be found in the 'server.properties' file under
+                    # the 'level-name' key. By default, level-name is set to 'world'.
+        generator: Terra:DEFAULT
     ```
 
-4. Either delete the existing `world` folder in your server directory, or rename it to something else (for example
-`world_backup`).
+4. Either delete the existing world folder (the name of this folder is covered above) in your server directory, or
+rename it to something else (for example `world_backup`).
 
 5. Boot your server back up.
 

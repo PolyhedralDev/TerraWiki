@@ -76,7 +76,7 @@ config, as well as the `author` to your username like so:
     ```yaml
     worlds:
       <LEVEL NAME>: # The name of this can be found in the 'server.properties' under
-                    # the 'level-name' key. By default, level-name is set to 'world'
+                    # the 'level-name' key. By default, level-name is set to 'world'.
         generator: Terra:EXAMPLE
         # Replace 'EXAMPLE' with the ID of your config.
     ```
