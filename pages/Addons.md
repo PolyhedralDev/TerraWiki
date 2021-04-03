@@ -14,6 +14,12 @@ When putting your addon on this page, include:
   Platforms: Bukkit Only   
   [Spigot Page](https://www.spigotmc.org/resources/89095/) |
   [Source Code](https://github.com/PolyhedralDev/TerraMythicMobsAddon/)
+* **Lootin Addon**    
+  Adds Lootin chests support to terra structures
+  more info about lootin can be found [here](https://www.spigotmc.org/resources/90453/)    
+  Platforms: Bukkit Only   
+  [Spigot Page](https://www.spigotmc.org/resources/90868/) |
+  [Source Code](https://github.com/sachingorkar102/Lootin/tree/lootin/Lootin-Terra-Addon)  
 * **Fractal Trees Addon**   
   Adds legacy BetterEnd fractal trees to Terra.    
   Platforms: All    
