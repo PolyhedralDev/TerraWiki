@@ -18,7 +18,7 @@ When putting your addon on this page, include:
   Adds legacy BetterEnd fractal trees to Terra.    
   Platforms: All    
   [Source Code](https://github.com/dfsek/TerraFractalTrees/)
-* **NMS Addon (*Incomplete*)**
+* **NMS Addon (*Incomplete*)**   
   Uses internal Minecraft server code on Bukkit to get around the limitations of the Bukkit worldgen API.    
   Platforms: Bukkit Only   
   [Source Code](https://github.com/dfsek/TerraNMSInjector/)

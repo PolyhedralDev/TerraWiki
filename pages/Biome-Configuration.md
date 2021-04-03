@@ -32,10 +32,6 @@ This value must be included, and can be abstracted.
 The ID of the Vanilla biome to use for this custom biome. A list of IDs can be found
 [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/block/Biome.html).
 
-## erodible
-A boolean value that defines whether this biome can be [eroded](./pack.yml-Options#erode).   
-This value is optional (defaults to false) and **cannot** be abstracted,
-
 # Subsections
 
 ## structures
