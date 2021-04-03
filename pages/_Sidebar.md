@@ -1,7 +1,7 @@
 ##### ABOUT
 
 [Home](./)  
-[Community Packs](./Community-Packs)
+[Community Packs](./Community-Packs)  
 [Community Addons](./Addons)
 
 ###### GUIDES
