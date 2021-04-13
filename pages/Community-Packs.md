@@ -38,7 +38,8 @@ The default nether configuration that comes packaged with Terra.
 
 ### BetterEnd
 
-An End based Terra pack intended to replace the Spigot plugin [BetterEnd](https://www.spigotmc.org/resources/betterend-rethink-the-end-dimension.79389/).
+An End based Terra pack intended to replace the Spigot plugin
+[BetterEnd](https://www.spigotmc.org/resources/betterend-rethink-the-end-dimension.79389/).
 
 ```diff
 ! THIS PACK IS EARLY IN DEVELOPMENT AND SHOULD NOT BE USED IN PRODUCTION !
@@ -50,14 +51,16 @@ An End based Terra pack intended to replace the Spigot plugin [BetterEnd](https:
 
 # Partial Packs
 
-The following packs are intended to provide a small handful of content such as a few biomes, collections of structures, and or other miscellaneous configs.
+The following packs are intended to provide a small handful of content such as a few biomes, collections of structures,
+and or other miscellaneous configs.
 
 Potential applications of partial packs may include:
 * Merging content such as biomes and structures into other packs.
 * Using the pack generation as a canvas for building.
 * Generating themed event worlds.
 
-These packs may not contain enough content to warrant standalone use, and may require some knowledge of Terra configurations for applications like merging into other packs.
+These packs may not contain enough content to warrant standalone use, and may require some knowledge of Terra
+configurations for applications like merging into other packs.
 
 ### Valantis Terra Config
 
@@ -90,7 +93,8 @@ The following packs are intended for assisting in pack development, and are not 
 
 ### Template Pack
 
-A simple config pack intended to serve as the basis for pack development, complete with annotations explaining various aspects of Terra configurations.
+A simple config pack intended to serve as the basis for pack development, complete with annotations explaining various
+aspects of Terra configurations.
 
 `Author` - **Astrash**
 
@@ -100,7 +104,8 @@ A simple config pack intended to serve as the basis for pack development, comple
 
 ### Image Example Pack
 
-An example config pack intended to showcase the use of image noise samplers in both biome distribution, and noise equations.
+An example config pack intended to showcase the use of image noise samplers in both biome distribution, and noise
+equations.
 
 `Author` - **Astrash**
 
