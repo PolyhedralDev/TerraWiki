@@ -10,7 +10,9 @@
 
 # Full Packs
 
-The following packs are intended as standalone configurations.
+> The following packs are intended as standalone configurations.
+
+---
 
 ### Default Config
 
@@ -21,6 +23,8 @@ The default configuration that comes packaged with Terra.
 `Download` - https://github.com/PolyhedralDev/TerraDefaultConfig/releases/download/latest/default.zip
 
 `Source` - https://github.com/PolyhedralDev/TerraDefaultConfig/tree/master/default
+
+---
 
 ### Default Nether
 
@@ -36,6 +40,8 @@ The default nether configuration that comes packaged with Terra.
 
 `Source` - https://github.com/PolyhedralDev/TerraDefaultConfig/tree/master/nether
 
+---
+
 ### BetterEnd
 
 An End based Terra pack intended to replace the Spigot plugin
@@ -49,18 +55,22 @@ An End based Terra pack intended to replace the Spigot plugin
 
 `Source` - https://github.com/PolyhedralDev/TerraDefaultConfig/tree/master/betterend
 
+---
+
 # Partial Packs
 
-The following packs are intended to provide a small handful of content such as a few biomes, collections of structures,
-and or other miscellaneous configs.
+> The following packs are intended to provide a small handful of content such as a few biomes, collections of structures,
+> and or other miscellaneous configs.
+> 
+> Potential applications of partial packs may include:
+> * Merging content such as biomes and structures into other packs.
+> * Using the pack generation as a canvas for building.
+> * Generating themed event worlds.
+> 
+> These packs may not contain enough content to warrant standalone use, and may require some knowledge of Terra
+> configurations for applications like merging into other packs.
 
-Potential applications of partial packs may include:
-* Merging content such as biomes and structures into other packs.
-* Using the pack generation as a canvas for building.
-* Generating themed event worlds.
-
-These packs may not contain enough content to warrant standalone use, and may require some knowledge of Terra
-configurations for applications like merging into other packs.
+---
 
 ### Valantis Terra Config
 
@@ -87,9 +97,13 @@ Contains a small selection of tropical themed biomes.
 
 </details>
 
+---
+
 # Development Packs
 
-The following packs are intended for assisting in pack development, and are not for use in production environments.
+> The following packs are intended for assisting in pack development, and are not for use in production environments.
+
+---
 
 ### Template Pack
 
@@ -101,6 +115,8 @@ aspects of Terra configurations.
 `Tested versions` - **4.3.0**
 
 `Source` - https://github.com/Astrashh/TerraTemplatePack
+
+---
 
 ### Image Example Pack
 
@@ -121,3 +137,5 @@ equations.
 ![Image of height map in-game](./images/packs/imageexamplepack/screenshot2.png)
 
 </details>
+
+---
