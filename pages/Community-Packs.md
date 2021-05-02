@@ -7,6 +7,7 @@
 - [Development Packs](#development-packs)
     - [Template Pack](#template-pack)
     - [Image Example Pack](#image-example-pack)
+    - [CaveTest](#cavetest)
 
 # Full Packs
 
@@ -135,6 +136,27 @@ equations.
 ![Image of biome distribution](./images/packs/imageexamplepack/screenshot1.png)
 
 ![Image of height map in-game](./images/packs/imageexamplepack/screenshot2.png)
+
+</details>
+
+---
+
+### CaveTest
+
+An experimental pack centered around noise carvers. Intended for demonstration purposes, but could be adapted to be useable for regular gameplay.
+
+`Author` - **Astrash**
+
+`Tested versions` - **5.1.3**
+
+`Source` - https://github.com/Astrashh/TerraCaveTest
+
+<details>
+<summary>Screenshots</summary><br>
+
+![Image of caves with lava](./images/packs/cavetest/preview1.png)
+
+![Image of caves](./images/packs/cavetest/preview2.png)
 
 </details>
 
