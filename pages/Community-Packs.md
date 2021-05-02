@@ -83,6 +83,17 @@ A simple pack for generating moon terrain.
 
 `Source` - https://github.com/Astrashh/TerraCelestialSuite/tree/master/MoonBasic
 
+<details>
+<summary>Screenshots</summary><br>
+
+![Image moon surface](./images/packs/celestialsuite/moonbasic/preview1.png)
+
+![Image of a map of the moon](./images/packs/celestialsuite/moonbasic/preview2.png)
+
+</details>
+
+---
+
 ### Valantis Terra Config
 
 Contains a small selection of tropical themed biomes.
