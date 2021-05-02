@@ -3,6 +3,7 @@
     - [Default Nether](#default-nether)
     - [BetterEnd](#betterend)
 - [Partial Packs](#partial-packs)
+    - [Celestial Suite - MoonBasic](#celestial-suite---moonbasic)
     - [Valantis Terra Config](#valantis-terra-config)
 - [Development Packs](#development-packs)
     - [Template Pack](#template-pack)
@@ -71,6 +72,16 @@ An End based Terra pack intended to replace the Spigot plugin
 > configurations for applications like merging into other packs.
 
 ---
+
+### Celestial Suite - MoonBasic
+
+A simple pack for generating moon terrain.
+
+`Author` - **Astrash**
+
+`Tested versions` - **5.1.3**
+
+`Source` - https://github.com/Astrashh/TerraCelestialSuite/tree/master/MoonBasic
 
 ### Valantis Terra Config
 
