@@ -11,12 +11,15 @@ This page will explain some general technical concepts related to noise that are
   - [Seeds](#seeds)
   - [Flavors of Noise](#flavors-of-noise)
   - [Multidimensional Noise](#multidimensional-noise)
-  - [Thresholding](#thresholding)
+  - [Segmenting Noise](#segmenting-noise)
   - [Applying Noise to World Generation](#applying-noise-to-world-generation)
-- [Coherent Noise](#coherent-noise)
-  - [Simplex Noise](#simplex-noise)
-    - [Frequency](#frequency)
-    - [Simplex Fractal Noise](#simplex-fractal-noise)
+  - [Coherent Noise](#coherent-noise)
+- [Manipulating Noise](#manipulating-noise)
+  - [Frequency](#frequency)
+  - [Fractal Noise](#fractal-noise)
+  - [Domain Warping](#domain-warping)
+
+<img src="images/noise/splashes/noise_preview.png" width="100%">
 
 ### What is noise?
 
@@ -48,7 +51,7 @@ Here we will cover some key points is grasping noise in Terra. If you feel like 
 
 #### Demonstration
 
-Let's begin with a demonstration which will display the most basic process of 'creating' noise. We will use a theoretical implementation of a noise function called [*white noise*](https://en.wikipedia.org/wiki/White_noise), and generate some values with it. Explaining how exactly our *white noise* function creates these values is outside the scope of this guide, however is not essential in understanding the general idea.
+Let's begin with a demonstration displaying the most basic process of 'creating' noise. We will use a theoretical implementation of a noise function called [*white noise*](https://en.wikipedia.org/wiki/White_noise), and generate some values with it. Explaining how exactly our *white noise* function creates these values is outside the scope of this guide, however is not essential in understanding the general idea.
 
  We will perform a couple samples with our function, using numbers 1 - 10 as an input, and record the outputs as both a number and a shade from black to white (where -1 is black, and 1 is white). We will also round the output to one decimal place for simplicity. *(Typical outputs will produce decimals with **much higher** precision than just one decimal place!)*
 
@@ -66,7 +69,12 @@ Let's begin with a demonstration which will display the most basic process of 'c
 
 <img src="images/noise/basic_example-01.png" alt="10 samples of white noise" width="75%">
 
-Simple, right? All our noise function does is convert one value to another. You can think of noise functions like a little number machine, that takes an input and scrambles it around to produce an output.
+Simple, right? All our noise function does is convert one value to another. You can think of noise functions like a little number machine that takes an input and scrambles it around to produce an output.
+
+###### SIDENOTE
+
+> Input numbers do not have to be whole numbers! This means you can input numbers like `1.5` and noise functions will work still the same way. We've just used integers here for the sake of demonstration.
+
 
 #### Determinism
 
@@ -76,7 +84,7 @@ Going off the results above, when passing the number `5` to our *white noise* fu
 
 #### Seeds
 
-Sometimes, we want to use the same input, and same noise function, but for multiple random unique outputs. In that case, we can use a seed in our noise function. Seeds are basically a way of getting a whole new uncorrelated set of random values from the same inputs + noise function.
+Sometimes, we want to use the same input, and same noise function, but for multiple random unique outputs. In that case, we can use a seed in our noise function. Seeds are basically a way of getting a whole new uncorrelated set of random values from the same inputs + noise function. Unlike the input value, seeds must be a whole number, meaning `5324` would be a valid seed, but `231.23` would not.
 
 Expanding on our basic model of noise generation we have:
 
@@ -89,7 +97,7 @@ Expanding on our basic model of noise generation we have:
 └──────────────────┘
 ```
 
-Here is a basic example using two different seeds to produce different outputs, using the same inputs and noise function from the example above.
+Here is an example using two different seeds to produce different outputs, using the same inputs and noise function from the example above.
 
 <img src="images/noise/basic_example-02.png" alt="10 samples of white noise" width="75%">
 
@@ -118,7 +126,7 @@ The phrase 'multidimensional noise' may sound intimidating, but don't worry, it'
 
 The simplest example of multidimensional noise is just adding one extra input to our noise function, for a grand total of 2 inputs. Conveniently, that gives us 2 dimensions, thus we can easily display a set of 2D samples in a grid. We will refer to the first input as `X`, and the second as `Z`.
 
-In a new example, lets use a range of 1 - 3 for both `X` and `Z`, giving us a total of 9 samples (3 x 3). We will only label the `X` & `Z` axes, as well the reference point `X=0`, `Z=0` for the sake of simplicity.
+In a new example, let's use a range of 1 - 3 for both `X` and `Z`, giving us a total of 9 samples (3 x 3). We will only label the `X` & `Z` axes, as well the reference point `X = 0`, `Z = 0` for the sake of simplicity.
 
 ###### TWO DIMENSIONAL MODEL
 
@@ -138,23 +146,23 @@ In a new example, lets use a range of 1 - 3 for both `X` and `Z`, giving us a to
 
 As you can see, all we have done is add another dimension to our white noise function, allowing for noise to be depicted as a 2D grid, rather than a list of values.
 
-Taking this experiment further, lets use a larger sample size. This time we will sample a grid of 64 x 64 points, where each sample will be represented as a single pixel.
+Taking this experiment further, let's use a larger sample size. This time we will sample a grid of 64 x 64 points, where each sample will be represented as a single pixel.
 
 <img src="images/noise/whitenoise64x64.png" alt="10 samples of white noise" width="25%">
 
-What we have done here is essentially produced a random image using our *white noise* function.
-
-By default, we will assume the above format of visualizing noise in 2D as an image, where left-to-right represents our `X` input, and up-to-down represents our `Z` input.
+What we have done here is essentially produced a random image using our *white noise* function. By default, we will assume the above format of visualizing noise in 2D as an image.
 
 ###### HIGHER DIMENSIONS
 
-Many noise algorithms support an arbitrary amount of inputs, meaning that we can sample noise in any number of dimensions. Typically, we will only use up to three dimensions, as we are three dimensional beings, however noise inputs don't always represent spatial dimensions. One application of 
+Many noise algorithms support an arbitrary amount of inputs, meaning that we can sample noise in any number of dimensions. Typically, we will only use up to three dimensions in Terra, where each input corresponds to the position on each axis `X`, `Y`, and `Z`.
 
-#### Thresholding
+#### Segmenting Noise
 
-[Thresholding](https://en.wikipedia.org/wiki/Thresholding_(image_processing)) in this context refers to segmenting an input value into several parts based on which defined range that input value fits in to. This is not a concept specific to noise, but is something to keep in mind, as it is commonly used in conjunction with noise and world generation.
+[Segmentation](https://en.wikipedia.org/wiki/Image_segmentation) in this context refers to splitting a set of values into several parts based on the range each value fits in to.
 
-A simple example of a thresholding function would be outputting a value of `-1` for input values less than `0`, and outputting a value of `1` for every other input, however the output could be anything, such as `true / false` depending on use.
+> This is not a concept specific to noise, but is something to keep in mind, as it is commonly used in conjunction with noise and world generation.
+
+The simplest form of segmentation is **thresholding**, which simply involves *separating a set of values into two groups based on whether they're higher or lower than a number*. An example of thresholding would be outputting a value of `-1` for input values less than `0`, and outputting a value of `1` for every other input, however the output could be anything, such as `true / false` depending on use.
 
 Applying a threshold to every pixel of an image where `input = intensity of the pixel`, `output = either a black or white pixel`, and `threshold = 50%`, we get the following result:
 
@@ -162,7 +170,7 @@ Applying a threshold to every pixel of an image where `input = intensity of the 
 
 ###### AS A MATH FUNCTION
 
-> We can represent a basic example of thresholding mathematically as a [piecewise](https://en.wikipedia.org/wiki/Piecewise) function:
+> We can represent thresholding mathematically as a [piecewise](https://en.wikipedia.org/wiki/Piecewise) function:
 > ```
 > f(x) =
 > {
@@ -170,19 +178,24 @@ Applying a threshold to every pixel of an image where `input = intensity of the 
 >    1   if   x >= threshold
 > }
 > ```
-> Most applications of thresholding are essentially fancy piecewise functions written programmatically.
+> Most applications of segmentation in Terra are essentially fancy piecewise functions like the one above, written programmatically.
 
-Thresholding is a useful concept to understand when combined with noise, as it allows for functionality such as splitting noise functions into distinct values. We will cover an exampled of thresholded noise and an application of it in the following section.
+Segmentation is a useful concept to understand when combined with noise, as it allows us to split noise functions into distinct values. We will cover an example of segmented noise and an application of it in the following section.
 
 #### Applying Noise to World Generation
 
-You might be wondering: *How does this information translate to generating an entire world?* Before we jump straight from simple noise generation to generating entire worlds, lets just keep it simple and apply the knowledge we've covered thus far to a simple application.
+You might be wondering: *How does this information translate to generating an entire world?* Before we jump straight from simple noise generation to generating entire worlds, let's just keep it simple and apply the knowledge we've covered thus far to a simple application.
 
 ###### PLANTING GRASS
 
-Lets say we have a flat square of grass blocks in our world, and we want to generate some grass on it. How would we determine where grass goes? Well we can use our *white noise* function for that!
+Let's say we have a patch of land, and we want to generate some tall grass on it, but how would we determine where the grass goes? The first thing we will want to do is define some basic rules for generating grass, before we get to the part where noise is involved:
 
-The first thing we will want to do is feed our *X & Z world coordinates & seed* into our *2D white noise* function, which will give us a randomized output value (from -1 to 1 as discussed) for every X-Z column for any given world seed. We will then use that output value to determine whether we place some grass or not. The way this will be determined is by simply [thresholding](#thresholding) it! For now lets use a threshold of `0`, where any value below our threshold will mean `place grass`.
+- `Grass` may only generate on top of `grass blocks`.
+- `Grass` may only replace `air`.
+
+Simple enough, now we know that grass will only generate where appropriate. With only these rules however, we would end up with grass on top of every single grass block! What if we only wanted it on *some* grass blocks? Well we can use our *white noise* function for that!
+
+Let's feed our *X & Z world coordinates & seed* into our *2D white noise* function, which will give us a randomized output value (from -1 to 1 as discussed) for every X-Z column for any given world seed. We will then use that output value to determine whether we place some grass or not. The way this will be determined is by simply [thresholding](#segmenting-noise) it! We'll start with a threshold of `0`, where any value below our threshold will mean **`place grass`**.
 
 ###### GRASS PLACEMENT MODEL
 
@@ -200,66 +213,169 @@ The first thing we will want to do is feed our *X & Z world coordinates & seed* 
 
 <img src="images/noise/grass_64x64_50pcthreshold.png" alt="64 x 64 distribution of grass placement" width="30%">
 
-As you can see, we now have a method of randomly determining where grass goes for any given X-Z coordinate in any world. We can even reduce / increase how much grass we get by modifying our threshold value:
+As you can see, we now have a method of randomly determining if grass should be placed or not for any given [X-Z coordinate](#multidimensional-noise) in [any world](#seeds). We can even reduce / increase how much grass we get by modifying our threshold value:
 
 `Threshold = -0.25`
 
 <img src="images/noise/grass_64x64_25pcthreshold.png" alt="64 x 64 distribution of grass placement, with a lower threshold" width="30%">
 
-*Lowering* the threshold from `0` to `-0.25` results in less grass because we are effectively removing the values between `-0.25` and `0` from falling below the threshold. Conversely, *increasing* the threshold will result in more grass, as more values will fall below the threshold.
+Lowering the threshold from `0` to `-0.25` results in less grass because we are effectively removing the values between `-0.25` and `0` from falling below the threshold. Conversely, *increasing* the threshold will result in more grass, as more values will fall below the threshold.
 
-This is just one of many applications of noise in world generation.
+Combining this with our rules we established earlier, we now have a method of checking for any block whether it should be grass or not.
 
-### Coherent Noise
+<img src="images/noise/grass.png" alt="In-game screenshot of procedurally generated grass" width="75%">
 
-Thus far, we have only covered noise that outputs seemingly random tv-static-like values, which is fine for simple applications like the grass example above. But how can noise produce smooth rolling hills, vast mountains, and other structured random generation? Lets place the white noise function under the category **Random Noise**, and introduce a new category of noise functions called **Coherent Noise**.
+#### Coherent Noise
+
+Thus far, we have only covered noise that outputs seemingly random tv-static-like values, which is fine for simple applications like the grass example above. But how can we get noise capable of producing smooth rolling hills, vast mountains, and other structured random generation? Let's place the white noise function under the category **'random noise'**, and introduce a new category of noise functions called **'coherent noise'**.
 
 ###### WHAT'S THE DIFFERENCE?
 
-The main difference that separates Random Noise from Coherent Noise is that 
+The main difference that separates *random noise* from *coherent noise* is that while random noise functions produce noise with no apparent structure, coherent noise functions produce *'structured'* noise, where adjacent input values produce correlated output values.
 
-#### Simplex Noise
-Simplex is a gradient noise function created by Ken Perlin to address the limitations in his older noise function,
-Perlin noise. Simplex is more performant than Perlin noise, especially in higher dimensions, and has fewer artifacts.
-Terra uses redistributed, normalized Simplex noise for [biome selection](./Biome-Selection).
-Here's an example of Simplex noise:   
-<img src="https://i.imgur.com/VyJmIfL.png" alt="Simplex Noise" width="200"/>   
-Each point on the image has a grayscale value equal to the value of the noise function at the image coordinates.
-As you can see, the values are pseudorandom, yet gradients exist between them.
+To get a better idea of the difference, here is a visualization of two different 2D sampled noise functions that both share the same inputs:
 
-##### Frequency
-Frequency is the amount that changes in coordinates affect changes in noise levels. Essentially, frequency can be
-thought of as "zooming" th noise in or out. Here are some examples:
+`Random | Coherent`
 
-* Frequency: 0.005:   
-<img src="https://i.imgur.com/VyJmIfL.png" alt="Simplex Noise" width="200"/>   
+<img src="images/noise/whitenoise64x64.png" width="25%">
 
-* Frequency: 0.01:   
-<img src="https://i.imgur.com/yJQc3y2.png" alt="Simplex Noise" width="200"/>  
+<img src="images/noise/opensimplex2_64x64.png" width="25%">
 
-* Frequency: 0.02:   
-<img src="https://i.imgur.com/ZAhpq4y.png" alt="Simplex Noise" width="200"/>   
+As you can see, the coherent noise example has a discernible structure where output values are smooth, compared to the random noise example where there's no apparent structure. The coherent noise function used above is known as **Simplex noise**, and is one of the many flavours of noise provided in Terra.
+
+### Manipulating Noise
+
+Now that we have covered some essential topics regarding noise, let's talk about stretching, squishing, tweaking, and remixing it!
+
+<img src="images/noise/splashes/rocky_noise.png">
+
+#### Frequency
+
+You might be wondering how we control just how large or how small details produced by noise functions are. This is where the concept of **frequency** comes in. Frequency is a number that modifies the scale of noise, where higher frequency produces more 'zoomed out' noise, while lower frequency results in more 'zoomed in' noise.
+
+Let's preview some comparisons of the same noise function with varying frequencies:
+
+ `2x Frequency | 1x Frequency | 0.5x frequency`
+
+<img src="images/noise/opensimplex2_64x64_freq_double.png" width="33%">
+
+<img src="images/noise/opensimplex2_64x64.png" width="33%">
+
+<img src="images/noise/opensimplex2_64x64_freq_half.png" width="33%">
+
+As a general rule of thumb:
+
+###### HIGHER FREQUENCY
+
+* Zooms *out*.
+* Produces *smaller* & *closer* details.
+* Increases the density of 'points' per unit of space.
+
+###### LOWER FREQUENCY
+
+* Zooms *in*.
+* Produces *larger* & *more spread out* details.
+* Decreases the density of 'points' per unit of space.
+
+<details>
+
+<summary><b>Under The Hood</b> - How frequency works</summary><br>
+
+The driving math behind frequencies is very simple: *multiply the input coordinates of a noise function by the frequency*. Here is a model of the process:
+
+```none
+┌──────────────────┐                     ┌────────────────┐   ┌───────────────────┐
+│ Input parameters │          ╭──────┬ → > Noise Function > → │ Randomized output │
+├──────────────────┤          │      │   └────────────────┘   └───────────────────┘
+│ - Seed           > ─────────╯      │
+│ - Frequency      > ─────────╮      │
+| - Input 1 (X)    > → X * Frequency ┤
+| - Input 2 (Z)    > → Y * Frequency ╯
+└──────────────────┘
+```
+
+For example, if we have a frequency of `2`, and want to sample the coordinates `(X = 3, Z = 2)`, first the coordinates will be multiplied by the frequency `2`, giving us the scaled coordinates `(X' = 6, Z' = 4)`. This new set of coordinates will then be input into the noise function which will then give us the final output value.
+
+> Based on this logic, we can deduct that the input:
+>
+> `(X = 3, Z = 2, Frequency = 2)`
+>
+> Will give the exact same output when inputting:
+>
+> `(X = 6, Z = 4, Frequency = 1)`
+
+Higher frequencies effectively produce *faster changes* when incrementing input coordinates, which is why higher frequencies make details closer and therefore smaller.
+
+</details>
+
+#### Fractal Noise
+
+In some situations, [Coherent Noise](#coherent-noise) on its own may be far too smooth and uniform to produce '*realistic*' results. Looking at the images above, you may notice that they are quite *blobby*, which may not be desired for applications where more detail is required. This is where **fractal noise** comes in.
+
+The basic premise of fractal noise that we can produce more detail by stacking multiple of the same noise function on top of each other, where each successive function (called an **octave**) has a smaller [frequency](#frequency) and is weaker (see: [Range & Amplitude](#range--amplitude)). This process of progressively stacking incrementally smaller noise to produce a [fractal](https://en.wikipedia.org/wiki/Fractal) effect is referred to as [fractal Brownian motion](https://en.wikipedia.org/wiki/Fractional_Brownian_motion) (Commonly abreviated as fBm).
+
+It might sound quite complicated in writing, so we can demonstrate this concept visually to get a better idea of what's happening:
+
+`1 Octave (Regular Noise) | 2 Octaves | 3 Octaves | 4 Octaves`
+
+<img src="images/noise/fractal/opensimplex2_1_octave.png" width="24.5%">
+
+<img src="images/noise/fractal/opensimplex2_2_octaves.png" width="24.5%">
+
+<img src="images/noise/fractal/opensimplex2_3_octaves.png" width="24.5%">
+
+<img src="images/noise/fractal/opensimplex2_4_octaves.png" width="24.5%">
+
+As you can see, the more octaves we add, the more detailed the noise gets. This is the main application of fractal noise: to produce more detail, especially at lower frequencies where detail is sparse.
+
+#### Domain Warping
+
+<img src="images/noise/splashes/overwarped.png" width="100%">
+
+Similar to fractal noise, domain warping involves manipulating the input *aka the **domain***, before it's passed to the noise function. More specifically, the domain of a noise function will be warped via translation by the output of a secondary warping function.
+
+To demonstrate domain warping more clearly, let's take a 64 x 64 square of samples in a space. Our function *to be warped* will be a checkerboard pattern, and our *warping function* will be some basic simplex noise.
+
+<img src="images/noise/domainwarp/checkerboard.png" width="25%">
 
 
+<img src="images/noise/domainwarp/simplex_warp.png" width="25%">
 
-As the frequency increases, the noise "zooms out," resulting in faster changes.
-##### Simplex Fractal Noise
-In some applications, Simplex noise is too smooth to produce "realistic" results. Looking at the images above, you may
-notice that they are quite "blobby." In some cases, more randomness is desirable. This is where Simplex Fractal noise
-is useful. Simplex Fractal noise stacks a number of Simplex noise functions at different frequencies on top of each
-other, to produce a noisier result.
+When domain warping the checker board function by the simplex we get the following result:
 
-* 1 Octave:   
-<img src="https://i.imgur.com/VyJmIfL.png" alt="Simplex Noise" width="200"/>   
+<img src="images/noise/domainwarp/checkerboard_warped.png" width="35%">
 
-* 2 Octaves:   
-<img src="https://i.imgur.com/3rL2vs9.png" alt="Simplex Noise" width="200"/>   
+As you can see, our once perfectly square boxes have been contorted out of shape by the warp function.
 
-* 3 Octaves:   
-<img src="https://i.imgur.com/3rL2vs9.png" alt="Simplex Noise" width="200"/>   
+<details>
 
-* 4 Octaves:   
-<img src="https://i.imgur.com/JDkFc8l.png" alt="Simplex Noise" width="200"/>   
+<summary><b>Under The Hood</b> - The Math Behind Domain Warping</summary><br>
+
+To get a better idea of what's happening, let's better define the process:
+> 
+> * We will define `noise(coordinate)` as our function to be warped, where `coordinate` represents the input values (such as the familiar `X` and `Z` coordinates).
+> 
+> * To *translate* `noise`, we can simply add some translation to the input: `noise(coordinate + translation)`. Translating simply means moving left / right / up / down / etc.
+> 
+> * We can then define `warp_noise(coordinate)` as our warping function.
+> 
+> * If we make `translation` our `warp_noise` function then now the `coordinate` of `noise` will be translated by `warp_noise` like so:
+> 
+>     `noise(coordinate + warp_noise(coordinate))`
+>
+> * Finally, we can multiply the output of `warp_noise` by a value `amplitude`, which will control how 'strong' the warping will be, to give us the final formula:
+> 
+>     `noise(coordinate + warp_noise(coordinate) * amplitude)`
+
+</details>
+
+#### Range & Amplitude
+
+It will be valuable to define the terms [*range*](https://en.wikipedia.org/wiki/Range_of_a_function) and [*amplitude*](https://en.wikipedia.org/wiki/Amplitude) in relation to noise to better understand what your noise is doing.
+
+Range simply refers to the minimum and maximum a noise function can output. As explained earlier on, conventionally noise functions output values between `-1` and `1`, meaning that the **range** of a typical noise function is `[-1, 1]`. It's important to note that this isn't always the case and sometimes the 
+
+Amplitude simply refers to how large the output of a noise function can be.  The amplitude of noise functions may be modified, usually during the process of calculations (either made internally by Terra, or externally via configuration).
 
 
 
