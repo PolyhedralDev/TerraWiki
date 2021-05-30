@@ -21,12 +21,13 @@ make sure to support entirely, which allow your game to run extremely well.
 
 #### Bukkit (Paper and friends)
 If you're running a large server for lots of people, you'll probably want to use Bukkit, simply because of all
-the plugins available for large servers. We do not recommend using Bukkit for a small server, for that, use [[Fabric]].
+the plugins available for large servers. We do not recommend using Bukkit for a small server, for that, use
+[Fabric](#Fabric).
 
 > #### A Note on Bukkit/Spigot/Paper    
 > Lots of people get confused about what the difference is between Bukkit, Spigot, and Paper.    
 >     
-> ####TL;DR: 
+> #### TL;DR: 
 > **Bukkit** is an API, a way for developers to interface with and write plugins for the Minecraft server.     
 >     
 > **Spigot** is an *implementation* of the Bukkit API, it's a platform that allows the Minecraft server to load and run
