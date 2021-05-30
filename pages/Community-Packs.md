@@ -2,11 +2,14 @@
     - [Default Config](#default-config)
     - [Default Nether](#default-nether)
     - [BetterEnd](#betterend)
+    - [TerraEarth](#terraearth)
 - [Partial Packs](#partial-packs)
+    - [Celestial Suite - MoonBasic](#celestial-suite---moonbasic)
     - [Valantis Terra Config](#valantis-terra-config)
 - [Development Packs](#development-packs)
     - [Template Pack](#template-pack)
     - [Image Example Pack](#image-example-pack)
+    - [CaveTest](#cavetest)
 
 # Full Packs
 
@@ -57,6 +60,20 @@ An End based Terra pack intended to replace the Spigot plugin
 
 ---
 
+### TerraEarth
+
+A Terra configuration pack with the goal of creating a realistic, yet playable and functional Earth map.
+
+```diff
+! THIS PACK IS EARLY IN DEVELOPMENT AND SHOULD NOT BE USED IN PRODUCTION !
+```
+
+`Author` - **Sancires**
+
+`Source` - https://github.com/Sancires/TerraEarth/tree/master
+
+---
+
 # Partial Packs
 
 > The following packs are intended to provide a small handful of content such as a few biomes, collections of structures,
@@ -69,6 +86,27 @@ An End based Terra pack intended to replace the Spigot plugin
 > 
 > These packs may not contain enough content to warrant standalone use, and may require some knowledge of Terra
 > configurations for applications like merging into other packs.
+
+---
+
+### Celestial Suite - MoonBasic
+
+A simple pack for generating moon terrain.
+
+`Author` - **Astrash**
+
+`Tested versions` - **5.1.3**
+
+`Source` - https://github.com/Astrashh/TerraCelestialSuite/tree/master/MoonBasic
+
+<details>
+<summary>Screenshots</summary><br>
+
+![Image moon surface](./images/packs/celestialsuite/moonbasic/preview1.png)
+
+![Image of a map of the moon](./images/packs/celestialsuite/moonbasic/preview2.png)
+
+</details>
 
 ---
 
@@ -135,6 +173,27 @@ equations.
 ![Image of biome distribution](./images/packs/imageexamplepack/screenshot1.png)
 
 ![Image of height map in-game](./images/packs/imageexamplepack/screenshot2.png)
+
+</details>
+
+---
+
+### CaveTest
+
+An experimental pack centered around noise carvers. Intended for demonstration purposes, but could be adapted to be useable for regular gameplay.
+
+`Author` - **Astrash**
+
+`Tested versions` - **5.1.3**
+
+`Source` - https://github.com/Astrashh/TerraCaveTest
+
+<details>
+<summary>Screenshots</summary><br>
+
+![Image of caves with lava](./images/packs/cavetest/preview1.png)
+
+![Image of caves](./images/packs/cavetest/preview2.png)
 
 </details>
 
