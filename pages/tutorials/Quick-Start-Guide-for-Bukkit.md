@@ -1,4 +1,4 @@
-> This guide is intended for the **Bukkit** version of Terra. See the (Getting Started Page)[./Quick-Start-Guide] for
+> This guide is intended for the **Bukkit** version of Terra. See the [Getting Started Page](./Quick-Start-Guide) for
 > guides on other platforms.
 
 ### Preface
