@@ -1,9 +1,3 @@
-
-[//]: # (Noise configuration)
-
-This page will explain some general technical concepts related to noise that are important to have an understanding of
-when developing configs.
-
 - [What is noise?](#what-is-noise)
     - [Why is noise important?](#why-is-noise-important)
   - [Noise Basics](#noise-basics)
