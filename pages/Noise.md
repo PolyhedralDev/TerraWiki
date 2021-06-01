@@ -269,7 +269,7 @@ up with grass on top of every single grass block! What if we only wanted it on *
 Let's feed our *X & Z world coordinates & seed* into our *2D white noise* function, which will give us a randomized
 output value (from -1 to 1 as discussed) for every X-Z column for any given world seed. We will then use that output
 value to determine whether we place some grass or not. The way this will be determined is by simply
-[thresholding](#segmenting-noise) it! We'll start with a threshold of `0`, where any value below our threshold will mean
+[thresholding](#segmentation) it! We'll start with a threshold of `0`, where any value below our threshold will mean
 **`place grass`**.
 
 ###### GRASS PLACEMENT MODEL
@@ -334,7 +334,7 @@ random noise example where there's no apparent structure. The coherent noise fun
 ### Noise Segmentation
 
 Now that we have introduced coherent noise, we can provide a better visual example of noise
-[segmentation](#segmenting-noise). Let's use the following list of colors and distribute them across a noise function
+[segmentation](#segmentation). Let's use the following list of colors and distribute them across a noise function
 via segmentation:
 
 ```yaml
@@ -434,7 +434,7 @@ to generate every image of noise used on this page. You can find the Noise Tool 
 > each parameter does, and will give you an intuition on how you can fine tune them to your advantage.
 
 For a complete list of noise function `type`s and their parameters available in Terra, please refer to the
-[Noise Configuration](./Noise-Options.md) documentation.
+[Noise Configuration](./Noise-Options) documentation.
 
 ### Frequency
 
@@ -552,7 +552,7 @@ pattern of surface blocks in the biome.
 
 ### Fractal Noise
 
-In some situations, [Coherent Noise](#coherent-noise) on its own may be far too smooth and uniform to produce
+In some situations, [coherent noise](#coherent-noise) on its own may be far too smooth and uniform to produce
 '*realistic*' results. Looking at the images above, you may notice plain simplex is quite *blobby*, which may not be
 desired for applications where more detail is required. This is where **fractal noise** comes in.
 
