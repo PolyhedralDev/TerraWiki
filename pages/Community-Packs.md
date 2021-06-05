@@ -74,6 +74,16 @@ A Terra configuration pack with the goal of creating a realistic, yet playable a
 
 ---
 
+### Creative Lands
+
+A pack which adds biomes alongside Terra's Default biomes, with some modifications. Includes many large structures and schematics which would not be suitable for weaker computers or servers.
+
+`Author` - **Crysillion**
+
+`Source` - https://github.com/Crysillion/creativelands
+
+---
+
 # Partial Packs
 
 > The following packs are intended to provide a small handful of content such as a few biomes, collections of structures,
