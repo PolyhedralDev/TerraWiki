@@ -15,7 +15,7 @@
 
 [Weighted Pools](./Weighted-Pools)  
 [Block Palettes](./Block-Palettes)  
-[Using Custom Blocks](./Custom-Blocks)  
+[Using Custom Blocks on Bukkit](./Custom-Blocks)  
 
 [TerraScript](./TerraScript)  
 [Working with Structures](./Working-With-Structures)  

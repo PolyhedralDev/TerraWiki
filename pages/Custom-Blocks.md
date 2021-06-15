@@ -3,6 +3,9 @@ MMOItems and CustomItems (these two just for sake of example, there are likely o
 out there worth checking out). For information on configuring ore generation with Terra, see
 [Ore Configuration](https://github.com/PolyhedralDev/TerraWiki/blob/master/pages/Ore-Configuration.md).
 
+**This tutorial is for Bukkit only. On other platforms, simply use the namespaced ID of the block you want, the
+same way as you would any Minecraft block.**
+
 # Custom Blocks
 
 It's important to understand that custom item plugins do not actually add new blocks to Minecraft, but instead
