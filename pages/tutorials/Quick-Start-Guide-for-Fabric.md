@@ -1,4 +1,4 @@
-> This guide is intended for the **Fabric** version of Terra. See the [Getting Started Page](./Quick-Start-Guide) for
+> This guide is intended for the **Fabric** version of Terra on a server. See the [Getting Started Page](./Quick-Start-Guide) for
 > guides on other platforms.
 
 If you have already installed Terra or already know how to install Fabric mods, you can skip to
