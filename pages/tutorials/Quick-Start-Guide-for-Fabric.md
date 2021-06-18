@@ -1,20 +1,74 @@
-> This guide is intended for the **Fabric** version of Terra on a server. See the [Getting Started Page](./Quick-Start-Guide) for
+> This guide is intended for the **Fabric** version of Terra. See the [Getting Started Page](./Quick-Start-Guide) for
 > guides on other platforms.
 
 If you have already installed Terra or already know how to install Fabric mods, you can skip to
-[Setting up a World](#setting-up-a-world).
+[Setting up a World on a Fabric client](#setting-up-a-world-on-a-fabric-client) or 
+[Setting up a World on a Fabric server](#setting-up-a-world-on-a-fabric-server).
 
-### Download & Installation
+### Download & Installation for a Fabric client
 
 1. Download the latest Terra Fabric release from the Modrinth website
 [here](https://modrinth.com/mod/terra).
 
-2. Once you have downloaded the `.jar` file from Modrinth, simply place the file your `mods` folder located inside your
+2. Once you have downloaded the `.jar` file from Modrinth, simply place the file into your `mods` folder located inside your Minecraft directory.
+
+    > Make sure you grab the correct version! Don't get the file named forge, or the file listed for a different minecraft version
+
+3. Once the mod has been installed, start your client.
+
+4. Once minecraft has loaded, check your logs for the following line to ensure everything has been
+installed correctly:
+
+```none
+[XX:XX:XX] [main/INFO]: Loaded config pack "DEFAULT" vX.X.X by dfsek in XXXX.XXms.
+```
+
+This means that the mod has loaded successfully, and that the *default* **Configuration Pack** has been unpacked and
+loaded correctly without issues.
+
+###### TROUBLESHOOTING INSTALLATION
+
+>If the mod, or `DEFAULT` pack failed to load, console/logs will display an error message outlining what went wrong. Be
+>sure to read through the error and double check if you have made a mistake anywhere.
+>
+>If you are unable to install the mod successfully, and have attempted to fix any issues yourself, please feel free to
+>shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant error logs!
+
+### Setting up a World on a Fabric client
+
+Here we will be creating a new world with Terra generation.
+
+#### Procedure
+
+1. Create a new world just like normal, change the settings to your liking. But don't click "Create New World" yet
+2. "Go to More World Options"
+3. Press the "World Type" button untill you see "World Type Terra:<CONFIG_ID>", to use the default pack select "Terra:DEFAULT"
+4. Press "Create New World" and check if your new world is using Terra world generation.
+
+If you followed the steps correctly without any errors, then you have successfully set up a server with Terra!
+
+###### TROUBLESHOOTING WORLD SETUP
+
+>In the case that you run into issues during the world set up process, be sure to check you have followed each step
+>correctly. Check for any errors in console and try to interpret what the issue might be.
+>
+>Again you are unable to set up a world successfully, and have attempted to fix any issues yourself, please feel free to
+>shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant information and or
+>full server logs!
+
+
+
+### Download & Installation for a Fabric server
+
+1. Download the latest Terra Fabric release from the Modrinth website
+[here](https://modrinth.com/mod/terra).
+
+2. Once you have downloaded the `.jar` file from Modrinth, simply place the file into your `mods` folder located inside your
 server root.
 
     > Make sure you grab the correct version! Don't get the file named forge, or the file listed for a different minecraft version
 
-3. Once the plugin has been installed, start your server.
+3. Once the mod has been installed, start your server.
 
 4. Once the the server has restarted, check your console log for the following line to ensure everything has been
 installed correctly:
@@ -23,18 +77,19 @@ installed correctly:
 [XX:XX:XX] [main/INFO]: Loaded config pack "DEFAULT" vX.X.X by dfsek in XXXX.XXms.
 ```
 
-This means that the plugin has loaded successfully, and that the *default* **Configuration Pack** has been unpacked and
+This means that the mod has loaded successfully, and that the *default* **Configuration Pack** has been unpacked and
 loaded correctly without issues.
 
 ###### TROUBLESHOOTING INSTALLATION
 
->If the plugin, or `DEFAULT` pack failed to load, console will display an error message outlining what went wrong. Be
+>If the mod, or `DEFAULT` pack failed to load, the logs will display an error message outlining what went wrong. Be
 >sure to read through the error and double check if you have made a mistake anywhere.
 >
->If you are unable to install plugin successfully, and have attempted to fix any issues yourself, please feel free to
+>If you are unable to install the mod successfully, and have attempted to fix any issues yourself, please feel free to
 >shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant error logs!
 
-### Setting up a World
+
+### Setting up a World on a Fabric server
 
 Here we will be replacing the server's default world with a new Terra world.
 Because we are working with changes to worlds **ensure that you have made the necessary backups before making any destructive
@@ -68,15 +123,6 @@ The name of your world can be found under the 'level-name' key, also in server.p
 6. Join your server and check if your new world is using Terra world generation.
 
 If you followed the steps correctly without any errors, then you have successfully set up a server with Terra!
-
-###### TROUBLESHOOTING WORLD SETUP
-
->In the case that you run into issues during the world set up process, be sure to check you have followed each step
->correctly. Check for any errors in console and try to interpret what the issue might be.
->
->Again you are unable to set up a world successfully, and have attempted to fix any issues yourself, please feel free to
->shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant information and or
->full server logs!
 
 ### Where can I go from here?
 
