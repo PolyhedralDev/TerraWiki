@@ -110,8 +110,9 @@ as this will produce broken chunk borders between old and new terrain.
     1. Navigate to the `server.properties` file which is also contained within your server directory, and open it with any text
     editor.
 
-    1. Assign your new generator to the default world by setting the level-type to "Terra:<CONFIG_ID>"
-      (for the default pack this would be "Terra:DEFAULT") **note that the config ID is case sensative!**
+    1. Assign your new generator to the default world by setting level-type to "Terra:<CONFIG_ID>"
+      (for the default pack this would be "Terra:DEFAULT") **note that the config ID is case sensitive!**
+      >If the "level-type" key doesn't exist, simply add it yourself.
 
 4. Either delete the existing world folder in your server directory or rename it to something else (for example `world_backup`).  
 The name of your world can be found under the 'level-name' key, also in server.properties. The default world name is 'world'.
