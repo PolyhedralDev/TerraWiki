@@ -1,5 +1,7 @@
 > This guide is intended for the **Forge** version of Terra. See the [Getting Started Page](./Quick-Start-Guide) for
-> guides on other platforms.
+> guides on other platforms.  
+> :warning: The forge version is alpha software, for a more stable experience the [Fabric](./Quick-Start-Guide-for-Fabric) version is recommended ⚠️
+
 
 If you have already installed Terra or already know how to install Forge mods, you can skip to
 [Setting up a World on a Forge client](#setting-up-a-world-on-a-Forge-client) or 
