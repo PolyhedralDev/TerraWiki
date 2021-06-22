@@ -1,14 +1,4 @@
-This guide will outline the process of creating a new Terra configuration pack from scratch. If you haven't already, check out [Config Packs](./Config-Packs) for more information about config packs before continuing.
-
-- [Preparation](#preparation)
-    - [Setting Up Your Test Environment](#setting-up-your-test-environment)
-      - [Enabling Debug Mode](#enabling-debug-mode)
-      - [Accessing Console](#accessing-console)
-    - [Picking a Text Editor](#picking-a-text-editor)
-      - [Recommended Editors](#recommended-editors)
-- [Setting up a New Pack](#setting-up-a-new-pack)
-  - [Creating the Files](#creating-the-files)
-  - [Onwards!](#onwards)
+This guide will outline the process of creating a new Terra configuration pack from the beginning. If you haven't already, please read the [Config Development Introduction](./Config-Development-Introduction) for more information before continuing.
 
 While Terra has a very intuitive config system, this does **not** mean creating a decent config pack is a simple task!
 Procedural world generation contains a lot of moving parts and can get quite complex depending on how in-depth you want to get. Pack development can also be *very rewarding*. Being able to create, experiment, and modify worlds to your exact specification can be both a creative and enjoyable exercise. On top of that, you can then *play in your personal custom tailored worlds*, whether that is just by yourself, or with your friends on a server.
@@ -16,98 +6,7 @@ Procedural world generation contains a lot of moving parts and can get quite com
  This multi-part guide will provide a foundation of knowledge required to build your own world generator in Terra from scratch, while remaining as beginner friendly as possible. If you get stuck at any stage, or need some clarification, be sure to
 **ask for help** if you need it! We'll be happy to help you in our [Discord server](https://discord.gg/PXUEbbF).
 
-# Preparation
-
-This section goes over the basic setup preceding actual config pack development, including setting up a test server / client and an appropriate development workspace.
-
-### Setting Up Your Test Environment
-
-Before beginning development on a new pack, you will need a suitable server or client to test with. We recommend using a [Fabric](https://fabricmc.net/) client to develop config packs on, however this choice is up to you. You can refer to the [Quick Start Guide](./Quick-Start-Guide) to find instructions on how to set up Terra for each platform.
-
-```diff
-! Do not follow the the rest of this guide on any live production environment !
-```
-
-#### Enabling Debug Mode
-
-Once you have Terra running on your platform of choice, you will need to enable debug mode in order to access the relevant development tools.
-
-To enable debug mode, you must first navigate to the Terra configuration file named `config.yml`. This will be located inside a subdirectory contained inside your client / server directory *(You should already know where this is if you have already installed Terra!)*. The location will depend on what platform your test server / client is running on:
-
-- Forge & Fabric - `/config/Terra/`
-
-- Bukkit - `/plugins/Terra/`
-
-Once you have located the Terra configuration file, open in a text editor, and set debug to true like so:
-
-```yaml
-debug: true
-```
-
-#### Accessing Console
-
-Once you have enabled debug mode, you should also ensure you have access to your console. Again this will be dependent on the platform you're running Terra on, as well as the launcher or wrapper you start it from. We won't be covering how to find the console on every platform as that is outside the scope of this guide.
-
-<details>
-<summary><u>Mojang Minecraft Launcher</u></summary>
-
-1. Start the launcher and navigate to the settings page by clicking on this button in the bottom left:
-
-    <img src="images/pack-dev/mojang-launcher/settings.png">
-
-2. Enable displaying the output log on game startup here:
-
-    <img src="images/pack-dev/mojang-launcher/open_output_log.png">
-
-3. A window with the console log will now open when you start Minecraft.
-
-</details>
-
-<details>
-
-<summary><u>MultiMC Launcher</u></summary>
-
-1. Open up the MultiMC settings window
-
-2. Enable console log display on launch:
-
-    <img src="images/pack-dev/multimc-launcher/settings_enable_console.png">
-
-3. A window with the console log will now open when you start Minecraft.
-
-</details>
-
-### Picking a Text Editor
-
-When developing config packs, a text editor will be the main tool you'll use, so it's important that you use a suitable one for the job. You're free to use any text editor you're comfortable with, but we *highly* suggest using one with the following features:
-
-<details>
-
-<summary><u>YAML Syntax Highlighting</u></summary><br>
-
-> Having syntax highlighting in a text editor will make understanding and writing configs much easer, as you will be able to tell at a glance how things are structured. To emphasize the point, here is a comparison of a config with and without syntax highlighting:
->
-> `Syntax Highlighting | No Syntax Highlighting`
->
-> <img src="images/pack-dev/editor/yaml_syntax_highlighting_comparison.png" width="75%">
-
-</details>
-
-<details>
-
-<summary><u>Built In File Explorer</u></summary><br>
-
-> Using a text editor which lets you open entire folders as projects rather than just individual files will make pack development more streamlined and convenient. The ability to quickly swap between configs, view your pack hierarchy at a glance, and manage subdirectories within your text editor is a must if you want to get things done conveniently. This will save you plenty of time not having to manage both an external file explorer on top of text editor tabs and or instances.
->
-> <img src="images/pack-dev/editor/file_explorer.png" width="40%">
-
-</details>
-
-#### Recommended Editors
-
-- [**VSCode**](https://code.visualstudio.com/)
-
-- [**IntelliJ IDEA Community Edition**](https://www.jetbrains.com/idea/download/)
+> If you wish to **modify an existing pack** rather than creating your own from scratch, please refer to **[this](./Modifying-a-Pack)** guide instead.
 
 # Setting up a New Pack
 
@@ -135,11 +34,11 @@ The following steps will walk you through how to create a bare-bones config pack
 
 <details>
 
-<summary><b>1.</b> <i><b>Create a pack directory</b> that will store all the files for the pack.</i></summary>
+<summary><b>1.</b> <i><b>Create a pack directory</b> that will store all the files for your new pack.</i></summary>
 
 ---
 
-- Navigate to your *pack**s** directory* (not to be confused with *pack directory*), this will be a folder contained in the Terra directory (covered in [Enabling Debug Mode](#enabling-debug-mode)) under the name `packs`.
+- Navigate to your *pack**s** directory* (not to be confused with *pack directory*), this will be a folder contained in the Terra directory (covered in [Enabling Debug Mode](./Config-Development-Introduction#enabling-debug-mode)) under the name `packs`.
 
 - Once you have navigated there, create a new folder. The name of this folder is not important and could be anything you'd like it to be, but for the sake of explanation we will name the folder `tutorial`.
 
@@ -163,13 +62,13 @@ From now on we will refer to this folder as the **pack directory**.
 
 - Create a new config file([?](#a-note-on-yaml)) within your pack directory called `pack.yml` - this file is your pack manifest.
 
-- Open the pack manifest in your [editor of choice](#picking-a-text-editor) and add the following line to the file:
+- Open the pack manifest in your [editor of choice](./Config-Development-Introduction#picking-a-text-editor) and add the following line to the file:
 
     ```yaml
     id: <Pack Name>
     ```
 
-    > If your editor has a [built-in file explorer](#picking-a-text-editor), then you can simply open the pack directory as a project instead of opening singular files.
+    > If your editor has a [built-in file explorer](./Config-Development-Introduction#picking-a-text-editor), then you can simply open the pack directory as a project instead of opening singular files.
 
 - Replace `<Pack Name>` with whatever you'd like to use as a pack ID. It's convention to use all uppercase characters and replace spaces with underscores `_`. For this guide we will use the ID `TUTORIAL`.
 
@@ -311,7 +210,7 @@ After creating the necessary files above, you should start your server / client 
 [XX:XX:XX INFO]: [Terra] <PACK NAME> <PACK VERSION> by <AUTHOR> loaded in XXXX.XXXXms.
 ```
 
-## Onwards!
+# Onwards!
 
 Once you have successfully set up your own Terra config pack, you may continue to the
 [Configuring Your Pack](./Configuring-Your-Pack) page, where we will cover pack configuration.
