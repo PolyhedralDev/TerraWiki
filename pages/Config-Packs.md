@@ -31,7 +31,7 @@ will be located, including the `DEFAULT` pack which is automatically installed w
     > **Do not under any circumstances use the /reload command, or any third party
     >plugin
     > to reload your server,** simply restart the server instead!
-        [\[Why?\]](https://matthewmiller.dev/blog/problem-with-reload/)
+        [\[Why?\]](https://madelinemiller.dev/blog/problem-with-reload/)
 
   * If you are installing the pack on a **test environment** and *debug mode* is enabled (covered in
     [Creating a Pack](./Creating-a-Pack)), you can run the command `/terra reload` to reload Terra.
