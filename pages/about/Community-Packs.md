@@ -2,7 +2,7 @@
     - [Default Config](#default-config)
     - [Default Nether](#default-nether)
     - [BetterEnd](#betterend)
-    - [TerraEarth](#terraearth)
+    - [Creative Lands](#creative-lands)
 - [Partial Packs](#partial-packs)
     - [Celestial Suite - MoonBasic](#celestial-suite---moonbasic)
     - [Valantis Terra Config](#valantis-terra-config)
@@ -57,20 +57,6 @@ An End based Terra pack intended to replace the Spigot plugin
 `Author` - **dfsek**
 
 `Source` - https://github.com/PolyhedralDev/TerraDefaultConfig/tree/master/betterend
-
----
-
-### TerraEarth
-
-A Terra configuration pack with the goal of creating a realistic, yet playable and functional Earth map.
-
-```diff
-! THIS PACK IS EARLY IN DEVELOPMENT AND SHOULD NOT BE USED IN PRODUCTION !
-```
-
-`Author` - **Sancires**
-
-`Source` - https://github.com/Sancires/TerraEarth/tree/master
 
 ---
 
