@@ -2,7 +2,7 @@
 
 [Home](./)  
 [Community Packs](./Community-Packs)  
-[Community Addons](./Addons)
+[Community Addons](./Community-Addons)  
 
 ###### GUIDES
 
