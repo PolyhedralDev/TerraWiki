@@ -34,3 +34,7 @@ When putting your addon on this page, include:
   Uses internal Minecraft server code on Bukkit to get around the limitations of the Bukkit worldgen API.    
   Platforms: Bukkit Only   
   [Source Code](https://github.com/dfsek/TerraNMSInjector/)
+* **ItemsAdder Addon**    
+  Adds a `itemsAdderBlock` function to TerraScript. Allows for the use of ItemsAdder blocks in TerraScript. 
+  Platforms: Bukkit Only   
+  [Source Code](https://github.com/EVERYPLANET/TerraItemsAdderAddon)
