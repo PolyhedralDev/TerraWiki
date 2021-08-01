@@ -6,7 +6,7 @@
 - [Partial Packs](#partial-packs)
     - [Celestial Suite - MoonBasic](#celestial-suite---moonbasic)
     - [Valantis Terra Config](#valantis-terra-config)
-    - [Santopia](#santopia)
+    - [Santopia Lite](#santopia-lite)
 - [Development Packs](#development-packs)
     - [Template Pack](#template-pack)
     - [Image Example Pack](#image-example-pack)
@@ -134,7 +134,7 @@ Contains a small selection of tropical themed biomes.
 
 ---
 
-### Santopia
+### Santopia Lite
 
 A small pack showcasing a few simple, real world inspired biomes.
 
@@ -142,7 +142,7 @@ A small pack showcasing a few simple, real world inspired biomes.
 
 `Tested versions` - **5.3.3, 5.4.1**
 
-`Source` - https://github.com/Sancires/Santopia
+`Source` - https://github.com/Sancires/Santopia-Lite
 
 ---
 
