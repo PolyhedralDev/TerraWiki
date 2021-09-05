@@ -14,11 +14,11 @@ Once you have Terra running on your platform of choice, you will need to enable 
 
 To enable debug mode, you must first navigate to the Terra configuration file named `config.yml`. This will be located inside a subdirectory contained inside your client / server directory *(You should already know where this is if you have already installed Terra!)*. The location will depend on what platform your test server / client is running on:
 
-- Forge & Fabric - `/config/Terra/`
+- Fabric - `/config/Terra/`
 
 - Bukkit - `/plugins/Terra/`
 
-Once you have located the Terra configuration file, open in a text editor, and set debug to true like so:
+Once you have located the Terra configuration file, open it in a text editor and set debug to true like so:
 
 ```yaml
 debug: true
@@ -26,7 +26,7 @@ debug: true
 
 #### Accessing Console
 
-Once you have enabled debug mode, you should also ensure you have access to your console. Again this will be dependent on the platform you're running Terra on, as well as the launcher or wrapper you start it from. We won't be covering how to find the console on every platform as that is outside the scope of this guide.
+Once you have enabled debug mode, you should also ensure you have access to your console. Again, this will be dependent on the platform you're running Terra on, as well as the launcher or wrapper you start it from. We won't be covering how to find the console on every platform as that is outside the scope of this guide.
 
 <details>
 <summary><u>Mojang Minecraft Launcher</u></summary>
