@@ -66,7 +66,5 @@ will be located, including the `DEFAULT` pack which is automatically installed w
 
 #### How can I make my own pack?
 
-If you wish to work on making your own config pack, take a look at our [Creating a Pack](./Creating-a-Pack) guide which
+If you wish to work on making your own config pack, take a look at our [Config Development Introduction](./Config-Development-Introduction) which
 outlines everything you need to know to get started creating your own customized Terra worlds.
-
-[//]: # (#### What if I just want to tweak a pack?)
