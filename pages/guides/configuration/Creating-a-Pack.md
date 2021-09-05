@@ -44,7 +44,7 @@ The following steps will walk you through how to create a bare-bones config pack
 
 You should now have a folder with the following path:
 
-- Forge & Fabric - `/config/Terra/packs/tutorial`
+- Fabric - `/config/Terra/packs/tutorial`
 
 - Bukkit - `/plugins/Terra/packs/tutorial`
 
