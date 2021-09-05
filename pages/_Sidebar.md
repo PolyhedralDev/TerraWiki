@@ -12,6 +12,7 @@
 [Config Packs](./Config-Packs)  
 [Config Development Introduction](./Config-Development-Introduction)  
 [Creating a Pack](./Creating-a-Pack)  
+[Modifying an Existing Pack](./Modifying-a-Pack)  
 [Configuring Your Pack](./Configuring-Your-Pack)  
 
 [Weighted Pools](./Weighted-Pools)  
