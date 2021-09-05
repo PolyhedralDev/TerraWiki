@@ -2,10 +2,11 @@
     - [Default Config](#default-config)
     - [Default Nether](#default-nether)
     - [BetterEnd](#betterend)
-    - [TerraEarth](#terraearth)
+    - [Creative Lands](#creative-lands)
 - [Partial Packs](#partial-packs)
     - [Celestial Suite - MoonBasic](#celestial-suite---moonbasic)
     - [Valantis Terra Config](#valantis-terra-config)
+    - [Santopia](#santopia)
 - [Development Packs](#development-packs)
     - [Template Pack](#template-pack)
     - [Image Example Pack](#image-example-pack)
@@ -57,20 +58,6 @@ An End based Terra pack intended to replace the Spigot plugin
 `Author` - **dfsek**
 
 `Source` - https://github.com/PolyhedralDev/TerraDefaultConfig/tree/master/betterend
-
----
-
-### TerraEarth
-
-A Terra configuration pack with the goal of creating a realistic, yet playable and functional Earth map.
-
-```diff
-! THIS PACK IS EARLY IN DEVELOPMENT AND SHOULD NOT BE USED IN PRODUCTION !
-```
-
-`Author` - **Sancires**
-
-`Source` - https://github.com/Sancires/TerraEarth/tree/master
 
 ---
 
@@ -144,6 +131,18 @@ Contains a small selection of tropical themed biomes.
 ![Image of tropical rocky islands](./images/packs/valantisconfig/Tropical_Rocky_Islands.png)
 
 </details>
+
+---
+
+### Santopia
+
+A small pack showcasing a few simple, real world inspired biomes.
+
+`Author` - **Sancires**
+
+`Tested versions` - **5.3.3, 5.4.1**
+
+`Source` - https://github.com/Sancires/Santopia
 
 ---
 

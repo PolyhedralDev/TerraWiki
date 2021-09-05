@@ -1,4 +1,4 @@
-This page discusses the configuration of Biomes. For information on Biomes, see the [About Biomes](./Biomes) page.
+This page discusses the configuration of Biomes.
 
 Biome configurations are in the `biomes/` directory within a config pack.  
 

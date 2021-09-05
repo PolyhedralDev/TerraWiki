@@ -24,7 +24,17 @@ When putting your addon on this page, include:
   Adds legacy BetterEnd fractal trees to Terra.    
   Platforms: All    
   [Source Code](https://github.com/dfsek/TerraFractalTrees/)
+* **NMSAddon**   
+  Uses internal server code to bypass some limitations of the API, allowing functionality from other platforms on Spigot/Paper. 
+  Note: As this addon uses a lot of internal server code, it may be unstable and will take longer to update to newer Minecraft versions.
+  Platforms: Bukkit Only   
+  [Spigot Page](https://www.spigotmc.org/resources/terra-nmsaddon.93663/) |
+  [Source Code](https://github.com/Coll1234567/NMSAddon)
 * **NMS Addon (*Incomplete*)**   
   Uses internal Minecraft server code on Bukkit to get around the limitations of the Bukkit worldgen API.    
   Platforms: Bukkit Only   
   [Source Code](https://github.com/dfsek/TerraNMSInjector/)
+* **ItemsAdder Addon**    
+  Adds a `itemsAdderBlock` function to TerraScript. Allows for the use of ItemsAdder blocks in TerraScript. 
+  Platforms: Bukkit Only   
+  [Source Code](https://github.com/EVERYPLANET/TerraItemsAdderAddon)
