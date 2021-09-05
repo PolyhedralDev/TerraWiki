@@ -93,27 +93,22 @@ config, as well as the `author` to your username like so:
     author: dfsek
     # Replace 'dfsek' with your username
     ```
-
-6. Configure your test server's world to use the new config as a generator:
-    1. Open `bukkit.yml` (Found in the root of the server).
-
-    2. Assign your new generator to the default world  by **adding the following lines to the
-    end of the file**:
-
-    ```yaml
-    worlds:
-      <LEVEL NAME>: # The name of this can be found in the 'server.properties' under
-                    # the 'level-name' key. By default, level-name is set to 'world'.
-        generator: Terra:EXAMPLE
-        # Replace 'EXAMPLE' with the ID of your config.
-    ```
-
-7. Stop your test server, delete the `world` folder, and start your server again. Your test server will now be using
-your new config pack!
+---
 
 </details>
 
-### Onwards
+<details>
 
-Once you have successfully set up your own Terra config pack, you may continue to the
-[Configuring Your Pack](./Configuring-Your-Pack) page, where we will cover pack configuration.
+<summary><b>6. </b> <i><b>Create a new world</b> using your new pack.</i></summary>
+
+---
+
+The process of creating a new world will differ between platforms, refer to [Creating a Terra World](./Creating-a-Terra-World) for instructions for your config development platform of choice. This world will be used for previewing any changes made to your pack and should be considered disposable.
+
+You should now have a setup with a new pack duplicated from an existing one, in which you're able to make your own modifications and preview them in the world you just made.
+
+Once you're finished making your changes, you're free to treat this new pack as any other and use it for your own needs!
+
+---
+
+</details>
