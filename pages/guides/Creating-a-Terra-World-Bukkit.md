@@ -1,10 +1,3 @@
-```diff
-! This section is incomplete !
-```
-
-> This guide is intended for the **Bukkit** version of Terra. Guides will be written for other platforms once they
-> mature.
-
 ###### CONTENTS
 
 - [How Bukkit handles Terra worlds](#how-bukkit-handles-terra-worlds)
