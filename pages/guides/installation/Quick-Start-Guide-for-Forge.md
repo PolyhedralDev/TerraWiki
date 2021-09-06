@@ -1,6 +1,6 @@
 > This guide is intended for the **Forge** version of Terra. See the [Getting Started Page](./Quick-Start-Guide) for
 > guides on other platforms.  
-> :warning: The forge version is alpha software, for a more stable experience the [Fabric](./Quick-Start-Guide-for-Fabric) version is recommended ⚠️
+> :warning: The forge version is currently not supported ⚠️
 
 
 If you have already installed Terra or already know how to install Forge mods, you can skip to
@@ -96,7 +96,6 @@ loaded correctly without issues.
 Here we will be replacing the server's default world with a new Terra world.
 Because we are working with changes to worlds **ensure that you have made the necessary backups before making any destructive
 changes**!
-
 It is not possible to easily change the generator of an *existing world*, this is a good thing, 
 as this will produce broken chunk borders between old and new terrain.
 
