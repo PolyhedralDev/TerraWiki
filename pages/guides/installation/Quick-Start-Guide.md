@@ -1,7 +1,7 @@
 ### Preface
 
 Terra's platform-agnostic API allows us to seamlessly support many Minecraft modding platforms.
-Currently, Terra supports Fabric, and the Bukkit ecosystem.
+The currently supported platfoms include [Fabric](https://fabricmc.net) and the [Bukkit](https://dev.bukkit.org) ecosystem.
 
 If you have already decided on which platform you wish to use, simply choose the quick
 start guide for your platform:
