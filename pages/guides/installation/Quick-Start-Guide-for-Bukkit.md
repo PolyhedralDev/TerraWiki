@@ -43,13 +43,7 @@ After you have successfully installed Terra on your Bukkit server, refer to
 [Creating a Terra World on Bukkit](./Creating-a-Terra-World-on-Bukkit) for
 further instructions.
 
-###### TROUBLESHOOTING INSTALLATION
-
->If the plugin, or `DEFAULT` pack failed to load, console will display an error message outlining what went wrong. Be
->sure to read through the error and double check if you have made a mistake anywhere.
->
->If you are unable to install plugin successfully, and have attempted to fix any issues yourself, please feel free to
->shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant error logs!
+###### [TROUBLESHOOTING INSTALLATION](./Quick-Start-Guide#troubleshooting-installation)
 
 ### Where can I go from here?
 

@@ -51,3 +51,11 @@ the plugins available for large servers. We do not recommend using Bukkit for a 
 We recommend using Forge only when there are other Forge mods that you want to use with Terra. If you *just*
 want to play with Terra, use Fabric instead. If your other mods have Fabric versions, we recommend making the
 switch. Use Forge if you have Forge-only mods that you want to use with Terra.
+
+###### TROUBLESHOOTING INSTALLATION
+
+>If the plugin/mod, or `DEFAULT` pack failed to load, console will display an error message outlining what went wrong. Be
+>sure to read through the error and double check if you have made a mistake anywhere.
+>
+>If you are unable to install plugin/mod successfully, and have attempted to fix any issues yourself, please feel free to
+>shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant error logs!

@@ -28,7 +28,7 @@ installed correctly:
 This means that the mod has loaded successfully, and that the *default* **Configuration Pack** has been unpacked and
 loaded correctly without issues.
 
-###### TROUBLESHOOTING INSTALLATION
+###### [TROUBLESHOOTING INSTALLATION](./Quick-Start-Guide#troubleshooting-installation)
 
 >If the mod, or `DEFAULT` pack failed to load, console/logs will display an error message outlining what went wrong. Be
 >sure to read through the error and double check if you have made a mistake anywhere.
@@ -82,13 +82,7 @@ installed correctly:
 This means that the mod has loaded successfully, and that the *default* **Configuration Pack** has been unpacked and
 loaded correctly without issues.
 
-###### TROUBLESHOOTING INSTALLATION
-
->If the mod, or `DEFAULT` pack failed to load, the logs will display an error message outlining what went wrong. Be
->sure to read through the error and double check if you have made a mistake anywhere.
->
->If you are unable to install the mod successfully, and have attempted to fix any issues yourself, please feel free to
->shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant error logs!
+###### [TROUBLESHOOTING INSTALLATION](./Quick-Start-Guide#troubleshooting-installation)
 
 
 ### Setting up a World on a Forge server
