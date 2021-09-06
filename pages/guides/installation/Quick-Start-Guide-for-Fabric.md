@@ -2,8 +2,8 @@
 > guides on other platforms.
 
 If you have already installed Terra or already know how to install Fabric mods, you can skip to
-[Setting up a World on a Fabric Client](./Creating-a-Terra-World-on-Fabric#setting-up-a-world-on-a-fabric-client) or 
-[Setting up a World on a Fabric Server](./Creating-a-Terra-World-on-Fabric#setting-up-a-world-on-a-fabric-server).
+[Setting up a World on a Fabric Client](./Creating-a-Terra-World-on-a-Fabric-Client) or 
+[Setting up a World on a Fabric Server](./Creating-a-Terra-World-on-a-Fabric-Server).
 
 ### Download & Installation for a Fabric client
 
@@ -27,7 +27,7 @@ This means that the mod has loaded successfully, and that the *default* **Config
 loaded correctly without issues.
 
 After you have successfully installed Terra on your Fabric client, refer to
-[Setting up a World on a Fabric Client](./Creating-a-Terra-World-on-Fabric#setting-up-a-world-on-a-fabric-client) for
+[Creating a Terra World on a Fabric Client](./Creating-a-Terra-World-on-a-Fabric-Client) for
 further instructions.
 
 ###### TROUBLESHOOTING INSTALLATION
@@ -61,7 +61,7 @@ This means that the mod has loaded successfully, and that the *default* **Config
 loaded correctly without issues.
 
 After you have successfully installed Terra on your Fabric server, refer to
-[Setting up a World on a Fabric Server](./Creating-a-Terra-World-on-Fabric#setting-up-a-world-on-a-fabric-server) for
+[Creating a Terra World on a Fabric Server](./Creating-a-Terra-World-on-a-Fabric-Server) for
 further instructions.
 
 ###### TROUBLESHOOTING INSTALLATION
