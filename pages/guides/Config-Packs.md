@@ -13,12 +13,27 @@ You can find a list of community made Terra configuration packs on the [Communit
 
 Config packs are installed similarly to resource packs, which is a fairly straight forward process:
 
-1. Download your config pack, and place it in the directory `plugins/Terra/packs/`, this is where all Terra config packs
-will be located, including the `DEFAULT` pack which is automatically installed with Terra.
+1. Download your config pack, and place it in the *packs directory*. This will differ slightly between platforms:
 
-    ###### NOTE
+  - Fabric - `/config/Terra/packs`
 
-    >A pack can be contained inside either a folder, or a .zip / .terra archive.
+  - Bukkit - `/plugins/Terra/packs`
+
+2. Ensure the correct directory structure:
+
+* A pack can be contained inside either a folder, or a .zip / .terra archive within the packs directory.
+
+* The pack manifest or `pack.yml` must be contained directly inside the folder / archive like so:
+
+  ```diff
+  + CORRECT
+  /packs/<PACK NAME>/pack.yml
+
+  - INCORRECT
+  /packs/<FOLDER>/<PACK NAME>/pack.yml
+  ```
+
+* If this is not the case, reorganize the files such that the folder / archive containing the pack manifest is directly inside the packs directory, rather than being nested inside another directory.
 
 2. Once your pack is installed, load the pack on to the server by reloading Terra:
 
@@ -49,17 +64,6 @@ will be located, including the `DEFAULT` pack which is automatically installed w
 
 >If your pack failed to load, the console will display an error message outlining why the pack failed to load. Be sure to
 >read through the error and double check if you have made a mistake anywhere.
->
-> If you're unzipping a pack into a folder, ensure that pack.yml is contained within that folder, and not nested inside
->another folder like so:
->
-> ```diff
-> + CORRECT
-> <PACK NAME>/pack.yml
-> 
-> - INCORRECT
-> <FOLDER>/<PACK NAME>/pack.yml
-> ```
 >
 >If you are unable to install the pack, and have attempted to fix any issues, please feel free to shoot us a message on
 >our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant error logs!
