@@ -14,7 +14,7 @@ These instructions are intended for setting up a Terra world for Fabric singlepl
    
 5. Press `Create New World` and check if your new world is using Terra world generation.
 
-If you followed the steps correctly without any errors, then you have successfully set up a server with Terra!
+If you followed the steps correctly without any errors, then you have successfully set up your client with Terra!
 
 ###### TROUBLESHOOTING WORLD SETUP
 
