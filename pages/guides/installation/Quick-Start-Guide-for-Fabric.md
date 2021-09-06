@@ -2,8 +2,8 @@
 > guides on other platforms.
 
 If you have already installed Terra or already know how to install Fabric mods, you can skip to
-[Setting up a World on a Fabric client](#setting-up-a-world-on-a-fabric-client) or 
-[Setting up a World on a Fabric server](#setting-up-a-world-on-a-fabric-server).
+[Setting up a World on a Fabric Client](./Creating-a-Terra-World-on-Fabric#setting-up-a-world-on-a-fabric-client) or 
+[Setting up a World on a Fabric Server](./Creating-a-Terra-World-on-Fabric#setting-up-a-world-on-a-fabric-server).
 
 ### Download & Installation for a Fabric client
 
@@ -26,6 +26,10 @@ installed correctly:
 This means that the mod has loaded successfully, and that the *default* **Configuration Pack** has been unpacked and
 loaded correctly without issues.
 
+After you have successfully installed Terra on your Fabric client, refer to
+[Setting up a World on a Fabric Client](./Creating-a-Terra-World-on-Fabric#setting-up-a-world-on-a-fabric-client) for
+further instructions.
+
 ###### TROUBLESHOOTING INSTALLATION
 
 >If the mod, or `DEFAULT` pack failed to load, console/logs will display an error message outlining what went wrong. Be
@@ -33,30 +37,6 @@ loaded correctly without issues.
 >
 >If you are unable to install the mod successfully, and have attempted to fix any issues yourself, please feel free to
 >shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant error logs!
-
-### Setting up a World on a Fabric client
-
-Here we will be creating a new world with Terra generation.
-
-#### Procedure
-
-1. Create a new world just like normal, change the settings to your liking. But don't click `Create New World` yet
-2. Go to `More World Options`
-3. Press the `World Type` button untill you see `World Type Terra:<CONFIG_ID>`, to use the default pack select `Terra:DEFAULT`
-4. Press `Create New World` and check if your new world is using Terra world generation.
-
-If you followed the steps correctly without any errors, then you have successfully set up a server with Terra!
-
-###### TROUBLESHOOTING WORLD SETUP
-
->In the case that you run into issues during the world set up process, be sure to check you have followed each step
->correctly. Check for any errors in console and try to interpret what the issue might be.
->
->Again you are unable to set up a world successfully, and have attempted to fix any issues yourself, please feel free to
->shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant information and or
->full server logs!
-
-
 
 ### Download & Installation for a Fabric server
 
@@ -80,6 +60,10 @@ installed correctly:
 This means that the mod has loaded successfully, and that the *default* **Configuration Pack** has been unpacked and
 loaded correctly without issues.
 
+After you have successfully installed Terra on your Fabric server, refer to
+[Setting up a World on a Fabric Server](./Creating-a-Terra-World-on-Fabric#setting-up-a-world-on-a-fabric-server) for
+further instructions.
+
 ###### TROUBLESHOOTING INSTALLATION
 
 >If the mod, or `DEFAULT` pack failed to load, the logs will display an error message outlining what went wrong. Be
@@ -88,6 +72,7 @@ loaded correctly without issues.
 >If you are unable to install the mod successfully, and have attempted to fix any issues yourself, please feel free to
 >shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant error logs!
 
+<<<<<<< HEAD
 
 ### Setting up a World on a Fabric server
 
@@ -125,6 +110,8 @@ The name of your world can be found under the 'level-name' key, also in server.p
 
 If you followed the steps correctly without any errors, then you have successfully set up a server with Terra!
 
+=======
+>>>>>>> dab3fb7 (Separate installation from world creation for Fabric)
 ### Where can I go from here?
 
 If you would like to continue learning more about Terra, or would like to see what else you can get out of it, please
