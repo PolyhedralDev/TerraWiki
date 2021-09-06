@@ -1,8 +1,8 @@
 ### Setting up a World on a Fabric Server
 
 Here we will be replacing the server's default world with a new Terra world.
-Because we are working with changes to worlds **ensure that you have made the necessary backups before making any destructive
-changes**!
+Because we are working with changes to worlds **ensure that you have made the necessary backups before making any
+destructive changes**!
 
 It is not possible to easily change the generator of an *existing world*. This is a good thing,
 as changing the generator of a world will produce broken chunk borders between old and new terrain!
@@ -17,8 +17,8 @@ as changing the generator of a world will produce broken chunk borders between o
 
 3. Configure your server's world to use the new config as a generator:
    
-    1. Navigate to the `server.properties` file which is also contained within your server directory, and open it with any text
-       editor.
+    1. Navigate to the `server.properties` file which is also contained within your server directory, and open it with
+       any text editor.
 
     2. Assign your new generator to the default world by setting the `level-type` key to `Terra:<CONFIG_ID>`
        (for the default pack this would be `Terra:DEFAULT`). The config ID is **case sensitive**, e.g. `Terra:DEFAULT`
@@ -26,8 +26,9 @@ as changing the generator of a world will produce broken chunk borders between o
 
    > If the `level-type` key doesn't exist, simply add it yourself.
 
-4. Either delete the existing world folder in your server directory or rename it to something else (for example `world_backup`).  
-   The name of your world can be found under the 'level-name' key, also in server.properties. The default world name is 'world'.
+4. Either delete the existing world folder in your server directory or rename it to something else (for example
+   `world_backup`). The name of your world can be found under the 'level-name' key, also in server.properties. The
+   default world name is 'world'.
 
 5. Boot your server back up.
 

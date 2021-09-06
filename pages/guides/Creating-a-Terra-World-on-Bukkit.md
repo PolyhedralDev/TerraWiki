@@ -13,7 +13,8 @@ world generators.
 ### The Generator ID Format
 
 For each installed [Configuration Pack](./Config-Packs), Terra will assign a Bukkit generator ID with the format
-`Terra:<PACK ID>`. for example the default pack with the *pack ID* `DEFAULT` will have a *generator ID* of `Terra:DEFAULT`.
+`Terra:<PACK ID>`. for example the default pack with the *pack ID* `DEFAULT` will have a *generator ID* of
+`Terra:DEFAULT`.
 
 Pack IDs are **case sensitive** meaning that your capitalization within the generator
 ID must match that of the pack ID, e.g. `Terra:DEFAULT` and `Terra:default` are considered two distinct IDs.
@@ -37,8 +38,8 @@ recommend simply setting the generator directly through Bukkit.
 ### Setting a Generator Through directly through Bukkit
 
 If you are not using a world manager, then you will have to manually set up the generator for a world through the
-`bukkit.yml` configuration file. This file can be found within your server root (the folder that all your server files are
-contained in). Something to note is that *without a world manager, you cannot create new worlds!*
+`bukkit.yml` configuration file. This file can be found within your server root (the folder that all your server files
+are contained in). Something to note is that *without a world manager, you cannot create new worlds!*
 
 #### Replacing the Default World With a Terra World
 
@@ -69,8 +70,8 @@ the new generator.
         generator: Terra:DEFAULT
     ```
    
-4. Replace `<LEVEL NAME>` with the server's configured `level-name`. This can be found in the `server.properties` file under
-   the 'level-name' key. By default, level-name is set to `world`.
+4. Replace `<LEVEL NAME>` with the server's configured `level-name`. This can be found in the `server.properties` file
+   under the 'level-name' key. By default, level-name is set to `world`.
 
 5. Either delete the existing world folder (the name of this folder is covered above) in your server directory, or
    rename it to something else (for example `world_backup`).
@@ -119,9 +120,9 @@ using [Multiverse Core](https://github.com/Multiverse/Multiverse-Core/wiki) if y
 ###### BACKUP PLAN
 
 > Sometimes world managers will fail to correctly set the generator for a world when loading things up, which can lead
-> to potentially damaging issues with your worlds such as broken chunk borders. Because of this we recommend additionally
-> configuring a world [directly through Bukkit](#setting-a-generator-through-directly-through-bukkit) once you have set
-> it up through a world manager, to serve as a fail-safe in the event that a **world manager fails**.
+> to potentially damaging issues with your worlds such as broken chunk borders. Because of this we recommend
+> additionally configuring a world [directly through Bukkit](#setting-a-generator-through-directly-through-bukkit) once
+> you have set it up through a world manager, to serve as a fail-safe in the event that a **world manager fails**.
 
 #### Multiverse Core
 
