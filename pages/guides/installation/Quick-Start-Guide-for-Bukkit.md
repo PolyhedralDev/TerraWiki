@@ -27,7 +27,7 @@ server root.
     > If your server is already running, **do not under any circumstances use the /reload command, or any third party
     >plugin
     > to reload your server,** simply restart the server instead!
-    [\[Why?\]](https://matthewmiller.dev/blog/problem-with-reload/)
+    [\[Why?\]](https://madelinemiller.dev/blog/problem-with-reload/)
 
 4. Once the the server has restarted, check your console log for the following line to ensure everything has been
 installed correctly:
