@@ -142,12 +142,12 @@ per seed (since each noise function will return a completely new set of values f
 [determinism](#determinism), we're able to produce new unique randomized worlds by picking a random seed, while also
 being able to generate the exact same world* provided we use the same seed.
 
-###### VANILLA BEDROCK GENERATION TRIVIA
+###### VANILLA WORLD GENERATION TRIVIA
 
-> Some noise functions in vanilla generation use the same seed for every world (meaning they don't factor in the world
-> seed), which can result in every world generating a certain characteristic the exact same way. One notable example -
-> the function that controls bedrock formation uses a static seed for every world, leading every vanilla generated world
-> to share the same random configuration of bedrock.
+> In previous versions of Minecraft, Some noise algorithms used the same seed for every world (meaning they don't factor
+> in the world seed), which resulted in every world generating a certain characteristic the exact same way. One notable
+> example - the algorithm that controls bedrock formation used a static seed for every world, leading every world to
+> share the same random configuration of bedrock.
 
 Within Terra world generation, all noise producing functions use a combination of the world seed and a value called
 **salt**, to determine its own seed. Salt is a number you specify when defining noise configurations, and simply gets
