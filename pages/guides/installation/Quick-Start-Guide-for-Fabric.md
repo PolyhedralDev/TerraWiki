@@ -40,10 +40,10 @@ Here we will be creating a new world with Terra generation.
 
 #### Procedure
 
-1. Create a new world just like normal, change the settings to your liking. But don't click "Create New World" yet
-2. "Go to More World Options"
-3. Press the "World Type" button untill you see "World Type Terra:<CONFIG_ID>", to use the default pack select "Terra:DEFAULT"
-4. Press "Create New World" and check if your new world is using Terra world generation.
+1. Create a new world just like normal, change the settings to your liking. But don't click `Create New World` yet
+2. Go to `More World Options`
+3. Press the `World Type` button untill you see `World Type Terra:<CONFIG_ID>`, to use the default pack select `Terra:DEFAULT`
+4. Press `Create New World` and check if your new world is using Terra world generation.
 
 If you followed the steps correctly without any errors, then you have successfully set up a server with Terra!
 
@@ -110,9 +110,9 @@ as this will produce broken chunk borders between old and new terrain.
     1. Navigate to the `server.properties` file which is also contained within your server directory, and open it with any text
     editor.
 
-    1. Assign your new generator to the default world by setting level-type to "Terra:<CONFIG_ID>"
-      (for the default pack this would be "Terra:DEFAULT") **note that the config ID is case sensitive!**
-      >If the "level-type" key doesn't exist, simply add it yourself.
+    1. Assign your new generator to the default world by setting level-type to `Terra:<CONFIG_ID>`
+      (for the default pack this would be `Terra:DEFAULT`) **note that the config ID is case sensitive!**
+      >If the `level-type` key doesn't exist, simply add it yourself.
 
 4. Either delete the existing world folder in your server directory or rename it to something else (for example `world_backup`).  
 The name of your world can be found under the 'level-name' key, also in server.properties. The default world name is 'world'.
