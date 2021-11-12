@@ -1,5 +1,3 @@
-### Setting up a World on a Fabric Client
-
 These instructions are intended for setting up a Terra world for Fabric singleplayer.
 
 #### Procedure

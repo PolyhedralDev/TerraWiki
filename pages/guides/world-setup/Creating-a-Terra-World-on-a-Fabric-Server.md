@@ -1,5 +1,3 @@
-### Setting up a World on a Fabric Server
-
 Here we will be replacing the server's default world with a new Terra world.
 Because we are working with changes to worlds **ensure that you have made the necessary backups before making any
 destructive changes**!
