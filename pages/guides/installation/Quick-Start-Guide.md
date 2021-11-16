@@ -1,13 +1,17 @@
 ### Preface
 
-Terra's platform-agnostic API allows us to seamlessly support many Minecraft modding platforms,
-including Fabric, Forge, and the Bukkit ecosystem.
+Terra's platform-agnostic API allows us to seamlessly support many Minecraft modding platforms.
+The currently supported platfoms include [Fabric](https://fabricmc.net) and the [Bukkit](https://dev.bukkit.org) ecosystem. In regards to Bukkit, we offically support [Paper](https://papermc.io)+ implementations only, including but not limited to [Airplane](https://airplane.gg) and [Purpur](https://purpur.pl3x.net). 
+
 
 If you have already decided on which platform you wish to use, simply choose the quick
 start guide for your platform:
+
 * [Fabric](./Quick-Start-Guide-for-Fabric)
-* [Forge](./Quick-Start-Guide-for-Forge)
+
 * [Bukkit](./Quick-Start-Guide-for-Bukkit)
+
+---
 
 ### Choosing a Platform
 
@@ -46,11 +50,6 @@ the plugins available for large servers. We do not recommend using Bukkit for a 
 > still *work* on Spigot, there will be (important) features missing.    
 > 
 > #### TL;DR: Use Paper, or a fork of Paper.
-
-#### Forge
-We recommend using Forge only when there are other Forge mods that you want to use with Terra. If you *just*
-want to play with Terra, use Fabric instead. If your other mods have Fabric versions, we recommend making the
-switch. Use Forge if you have Forge-only mods that you want to use with Terra.
 
 ###### TROUBLESHOOTING INSTALLATION
 
