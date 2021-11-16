@@ -50,3 +50,11 @@ the plugins available for large servers. We do not recommend using Bukkit for a 
 > still *work* on Spigot, there will be (important) features missing.    
 > 
 > #### TL;DR: Use Paper, or a fork of Paper.
+
+###### TROUBLESHOOTING INSTALLATION
+
+>If the plugin/mod, or `DEFAULT` pack failed to load, console will display an error message outlining what went wrong. Be
+>sure to read through the error and double check if you have made a mistake anywhere.
+>
+>If you are unable to install plugin/mod successfully, and have attempted to fix any issues yourself, please feel free to
+>shoot us a message on our [Discord server](https://discord.gg/PXUEbbF) and provide any relevant error logs!
