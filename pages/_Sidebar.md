@@ -38,18 +38,13 @@
 [Biome Configuration](./Biome-Configuration)  
 [Palette Configuration](./Palette-Configuration)  
 [Ore Configuration](./Ore-Configuration)  
-[Carver Configuration](./Carver-Configuration)  
 [Flora Configuration](./Flora-Configuration)  
-[Tree Configuration](./Tree-Configuration)  
-[Structure Configuration](./Structure-Configuration)  
 
 ###### OTHER CONFIGURATION
 
 [Noise Configuration](./Noise-Options)  
 [Biome Pipeline](./Biome-Pipeline)  
 [Functions & Variables](./Functions-and-Variables)  
-[Included Trees](./Terra-Tree-Types)  
-[Included Flora](./Included-Flora)  
 
 ###### TERRASCRIPT
 
