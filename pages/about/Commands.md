@@ -6,6 +6,6 @@ Lists installed [config packs](./Config-Packs).
 
 Reloads installed config packs. Strictly for use in [pack development](./Config-Development-Introduction).
 
-# `/addons
+# `/addons`
 
 Lists installed [addons](./Community-Addons).
