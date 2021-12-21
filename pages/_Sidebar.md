@@ -3,6 +3,7 @@
 [Home](./)  
 [Community Packs](./Community-Packs)  
 [Community Addons](./Community-Addons)  
+[Commands](./Commands)  
 
 ###### GUIDES
 
