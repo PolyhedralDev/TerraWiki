@@ -1,9 +1,9 @@
-name: Wiki Sync
+name: Development Wiki Sync
 
 on:
   push:
     branches:
-      - master
+      - development
     paths:
       - 'pages/**'
 
@@ -16,7 +16,7 @@ jobs:
       - name: Checking out Repository
         uses: actions/checkout@v2
       - name: Syncing
-        run: sh src/sync.sh PolyhedralDev/Terra.wiki.git
+        run: sh src/sync.sh PolyhedralDev/TerraWiki.wiki.git
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
