@@ -8,25 +8,9 @@ Before beginning development on a new pack, you will need a suitable server or c
 ! Do not follow the the rest of this guide on any live production environment !
 ```
 
-#### Enabling Debug Mode
-
-Once you have Terra running on your platform of choice, you will need to enable debug mode in order to access the relevant development tools.
-
-To enable debug mode, you must first navigate to the Terra configuration file named `config.yml`. This will be located inside a subdirectory contained inside your client / server directory *(You should already know where this is if you have already installed Terra!)*. The location will depend on what platform your test server / client is running on:
-
-- Fabric - `/config/Terra/`
-
-- Bukkit - `/plugins/Terra/`
-
-Once you have located the Terra configuration file, open it in a text editor and set debug to true like so:
-
-```yaml
-debug: true
-```
-
 #### Accessing Console
 
-Once you have enabled debug mode, you should also ensure you have access to your console. Again, this will be dependent on the platform you're running Terra on, as well as the launcher or wrapper you start it from. We won't be covering how to find the console on every platform as that is outside the scope of this guide.
+Once you have Terra running on your platform of choice, you should ensure you have access to your console. This will be dependent on the platform you're running Terra on, as well as the launcher or wrapper you start it from. We won't be covering how to find the console on every platform as that is outside the scope of this guide.
 
 <details>
 <summary><u>Mojang Minecraft Launcher</u></summary>
@@ -88,6 +72,21 @@ When developing config packs, a text editor will be the main tool you'll use, so
 - [**VSCode**](https://code.visualstudio.com/)
 
 - [**IntelliJ IDEA Community Edition**](https://www.jetbrains.com/idea/download/)
+
+### Locating the Terra Directory
+
+You will need to know where the Terra directory is located, as this will be where all the files relevant to config development go. This is dependent on platform:
+
+- Fabric - `/config/Terra/`
+
+- Bukkit - `/plugins/Terra`
+
+Within this directory are two subdirectories:
+
+- `packs` - Contains all your installed config packs. By default, Terra will come pre-installed with a config pack under the file name `default.zip`.
+
+- `addons` - Contains all your installed addons. Similarly to the default pack, Terra will also come pre-installed with a set of *Core Addons*, which are modular components that
+  make up the majority of Terra's functionality.
 
 ### Beginning Config Development
 

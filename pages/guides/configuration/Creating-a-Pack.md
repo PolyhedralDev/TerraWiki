@@ -38,7 +38,7 @@ The following steps will walk you through how to create a bare-bones config pack
 
 ---
 
-- Navigate to your *pack**s** directory* (not to be confused with *pack directory*), this will be a folder contained in the Terra directory (covered in [Enabling Debug Mode](./Config-Development-Introduction#enabling-debug-mode)) under the name `packs`.
+- Navigate to your *pack**s** directory* (not to be confused with *pack directory*), this will be a folder contained in the Terra directory (covered in [Config Development Introduction](./Config-Development-Introduction)) under the name `packs`.
 
 - Once you have navigated there, create a new folder. The name of this folder is not important and could be anything you'd like it to be, but for the sake of explanation we will name the folder `tutorial`.
 
