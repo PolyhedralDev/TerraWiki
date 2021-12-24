@@ -1,9 +1,10 @@
 #### What exactly is a config pack?
 
-Config packs are a group of configuration files that define a Terra world generator. These configuration files are [YAML](https://en.wikipedia.org/wiki/YAML)
-based, and define all the necessary components to create a
-complete world generator with Terra. Users may install multiple config packs simultaneously, allowing the use of
-multiple Terra-based generators on the same server, with any number of worlds configured to use any of those generators.
+Config packs are a group of [configuration files](./Config-System#Config-Files) that tell Terra how to generate a world.
+
+Users may install multiple config packs simultaneously, allowing the use of multiple world generators on the same client / sever, with any number of worlds configured to use any of those generators.
+
+Config packs **do not automatically stack**, meaning it is not possible to combine features from multiple packs together without editing and merging them manually. The process of manually editing and merging can be quite complicated as the internal format of config packs is quite flexible - so we do not recommend attempting this unless you know what you're doing!
 
 #### Where can I find config packs?
 
@@ -35,26 +36,29 @@ Config packs are installed similarly to resource packs, which is a fairly straig
 
 * If this is not the case, reorganize the files such that the folder / archive containing the pack manifest is directly inside the packs directory, rather than being nested inside another directory.
 
-2. Once your pack is installed, load the pack on to the server by reloading Terra:
+3. Once your pack is installed, load the pack on to the client or server by reloading Terra:
 
-* If your server is **not running**, simply startup the server.
+* If your client or server is **not running**, simply start it up.
 
-* If your server is **already running**:
+* If your client or server is **already running**:
 
-  * If you are installing the pack on a **production environment**, restart the server.
+  * If you are installing the pack on a **client** or **production server**, restart the client / server.
 
     > **Do not under any circumstances use the /reload command, or any third party
     >plugin
-    > to reload your server,** simply restart the server instead!
+    > to reload a server,** simply restart the server instead!
         [\[Why?\]](https://madelinemiller.dev/blog/problem-with-reload/)
 
-  * If you are installing the pack on a **test environment** and *debug mode* is enabled (covered in
-    [Creating a Pack](./Creating-a-Pack)), you can run the command `/terra reload` to reload Terra.
+  * If you are installing the pack on a **test environment** and *debug commands* is enabled (covered in
+    [Creating a Pack](./Creating-a-Pack)), you can run the command `/packs reload` to reload Terra.
 
-    > Debug mode should only be enabled in a test environment!
+    > Debug commands should only be enabled on a test environment!
 
-3. If your pack has loaded correctly, then you should see this message in console after reloading Terra:
+4. Verify the pack has been loaded by Terra. You can check this multiple ways:
 
+  * Run the `/packs` command, the pack ID should be listed if it has loaded correctly.
+
+  * Check your console for the following message:
     ```none
     [XX:XX:XX INFO]: [Terra] Loading config pack "<PACK NAME>"
     [XX:XX:XX INFO]: [Terra] <PACK NAME> <PACK VERSION> by <AUTHOR> loaded in XXXX.XXXXms.
