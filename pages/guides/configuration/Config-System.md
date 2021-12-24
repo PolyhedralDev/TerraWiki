@@ -24,13 +24,13 @@ If you have not installed any other language addons, the assumed process of crea
 
 Otherwise, when prompted to create a new config file, it is implied that you should create a new file using a format supported by your installed *language addon(s)*.
 
-### Config File Organization
+#### Config File Organization
 
 As a general rule of thumb, a config file's file name and subdirectory within the config pack is mostly ignored by Terra. Because of this you're free to name your config files however you want and organize them in whatever directory structure you'd like. The pack manifest is the one exception, and is required to be defined directly in the pack directory, using the name `pack` (excluding the file extension). 
 
 ## Data in Configs 
 
-In this section, we will cover the basic ways data is written and formatted inside config files.
+In this section, we will cover the basic ways data is stored and written inside config files. Because Terra configs are able to be written in multiple languages, we use our own standardized set of terms to reference things that may be named differently between languages.
 
 > If you are already familiar with data structures and data-serialization languages, feel free to skim over this section and skip forward to [the next section](#Terra's-Config-System).
 
@@ -54,7 +54,7 @@ To put this information to use, let's create create a new config file in YAML an
 42
 ```
 
-And now we have a config that defines an `Integer` as the top level object, which represents the number `42`, simple right?
+We have now created a config that defines an `Integer` as the top level object, which represents the number `42`, simple right?
 
 Another numerical type that is slightly different from integers is a `Float`. The difference between integers and floats is that floats can represent numbers that contain decimals:
 
@@ -124,12 +124,12 @@ For simple data types like integers and strings it is clear which key correspond
 Here is an example of a `Map` contained within the value of another `Map` (which is the top level object):
 
 ```yaml
-parent key:
-  child key: value
-  sibling key: another value
+parent-key:
+  child-key: value
+  sibling-key: another value
 ```
 
-You can see that the map containing `child key` and `sibling key` is indented by two spaces, and is defined under the `parent key` key, signifying that it belongs to that key.
+You can see that the map containing `child-key` and `sibling-key` is indented by two spaces, and is defined under the `parent-key` key, signifying that it belongs to that key.
 
 And here is a `Map` (the top level object) containing a `List` of `String`s:
 
