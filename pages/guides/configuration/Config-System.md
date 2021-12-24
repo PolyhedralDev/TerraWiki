@@ -166,6 +166,43 @@ appointments:
 
 In this example, our top level object is of type `Map`, which contains two keys `shopping-list` and `appointments`. The value of both keys are of type `List`, where each *item* in each list contains a `Map`. 
 
+### Language Specific Syntax
+
+Some data-serialization languages support alternative syntax for representing the same thing, for example in YAML you can represent maps and lists using curly braces `{}` and square brackets `[]` respectively, where objects are separated by commas `,` instead. This can be useful for when you don't necessarily want to separate objects by lines and indentation:
+
+```yaml
+curly-brace-map: {
+  "key-1": "value-1",
+  "key-2": "value-2"
+}
+
+square-bracket-list: [ 
+  item-1,
+  item-2,
+  item-3
+]
+
+single-line-map: { "key-1": "value-1", "key-2": "value-2" }
+
+single-line-list: [ item-1, item-2, item-3 ]
+
+empty-map: {}
+
+empty-list: []
+```
+
+YAML also provides additional systems like **anchors**, which allow for easily re-using data within a config and is useful for when you might want to write the same thing multiple times in a config:
+
+```yaml
+some-list-of-data: &the-data-anchor
+  - item-1
+  - item-2
+
+somewhere-where-data-is-reused: *the-data-anchor
+```
+
+When parsed by the YAML language addon, the value of `somewhere-where-the-data-is-reused` will be the same as the list defined under `some-list-of-data`.
+
 ## Terra's Config System
 
 In this section we will cover:
