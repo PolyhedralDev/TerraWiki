@@ -1,4 +1,11 @@
+# THIS REPOSITORY CONTAINS THE *OLD* TERRA WIKI
+
+This repository exists for archival purposes.   
+
+**The new wiki can be found here: \[[source](https://github.com/PolyhedralDev/TerraDocs), [site](https://terra.polydev.org)\]**
+
 # Terra Wiki
+
 This is the Terra Wiki repository. It is automatically synchronized with the main repository wiki. If you are looking
 for Terra documentation, the main wiki can be found [here](https://github.com/PolyhedralDev/Terra/wiki).
 
